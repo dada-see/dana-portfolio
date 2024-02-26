@@ -12,12 +12,12 @@ const Project = ({ pjNum, photo, projectTitle, typeProject, portfolioLink, gitLi
                     </div>
                     <div className="linkBox">
                         <p className="portfolioLink">
-                            <a href={portfolioLink}>
+                            <a href={portfolioLink} target="_blank">
                                 <span className="material-symbols-outlined">language</span>
                             </a>
                         </p>
                         <p className="portfolioGit">
-                            <a href={gitLink}>
+                            <a href={gitLink} target="_blank">
                                 <img src="./img/icons/icon_github_bk.png" alt="git" />
                             </a>
                         </p>

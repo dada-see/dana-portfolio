@@ -32,8 +32,8 @@ const MyProjects = () => {
                             }
                             projectTitle={'Petdoc'}
                             typeProject={'팀 프로젝트'}
-                            portfolioLink={'/'}
-                            gitLink={'/'}
+                            portfolioLink={'https://petdoc-1fd2a.web.app/'}
+                            gitLink={'https://github.com/dada-see/petdoc'}
                             content={
                                 <>
                                     <p>React 사용</p>
@@ -61,7 +61,7 @@ const MyProjects = () => {
                             }
                             projectTitle={'Mujagi'}
                             typeProject={'개인 프로젝트'}
-                            portfolioLink={'/'}
+                            portfolioLink={'https://tubular-cendol-e7cebe.netlify.app/'}
                             gitLink={'https://github.com/dada-see/mujagi'}
                             content={
                                 <>
@@ -88,8 +88,8 @@ const MyProjects = () => {
                             }
                             projectTitle={'영풍문고'}
                             typeProject={'개인 프로젝트'}
-                            portfolioLink={'/'}
-                            gitLink={'/'}
+                            portfolioLink={'https://ypbook.netlify.app/'}
+                            gitLink={'https://github.com/dada-see/ypBook'}
                             content={
                                 <>
                                     <p>반응형 웹 페이지</p>
@@ -112,8 +112,8 @@ const MyProjects = () => {
                             }
                             projectTitle={'울산 관광'}
                             typeProject={'개인 프로젝트'}
-                            portfolioLink={'/'}
-                            gitLink={'/'}
+                            portfolioLink={'https://ulsantour.netlify.app/'}
+                            gitLink={'https://github.com/dada-see/ulsanTour'}
                             content={
                                 <>
                                     <p>고정형 웹 페이지</p>
@@ -136,7 +136,7 @@ const MyProjects = () => {
                             }
                             projectTitle={'Bose'}
                             typeProject={'개인 프로젝트'}
-                            portfolioLink={'/'}
+                            portfolioLink={'https://timely-biscochitos-83a12b.netlify.app/'}
                             gitLink={'https://github.com/dada-see/bose'}
                             content={
                                 <>
@@ -153,7 +153,7 @@ const MyProjects = () => {
                                 </>
                             }
                         />
-                    {/* </Slidㄴer> */}
+                    {/* </Slider> */}
                 </div>
                 <div className="scrollDown">
                     <Link
