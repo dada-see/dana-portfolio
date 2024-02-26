@@ -55,14 +55,14 @@ const MyInfo = () => {
                         <p>Figma</p>
                     </div>
                 </div>
-                <Link 
-                    to="MySkills" 
-                    smooth="true"
-                    duration={500}
-                    className="scrollDown"
-                >
-                    <span className="material-symbols-outlined">Double_Arrow</span>
-                </Link>
+                <div className="scrollDown">
+                    <Link
+                        to="MySkills" 
+                        smooth="true"
+                        duration={500}
+                        className="material-symbols-outlined"
+                    >Double_Arrow</Link>
+                </div>
             </div>
         </div>
     )

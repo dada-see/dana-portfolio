@@ -34,7 +34,7 @@ h1{
     left: 0;
     height: 40px;
     text-align: center;
-    span{
+    .material-symbols-outlined{
         color: $white;
         font-size: 30px;
         transform: rotate(90deg);
@@ -42,6 +42,7 @@ h1{
         animation-duration: 0.8s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
+        cursor: pointer;
     }
 } 
 
@@ -49,6 +50,19 @@ h1{
 @media screen and (min-width:600px){
     h1{
         font-size: 6vw;
+        text-shadow: 4px 4px 0 $purple;
+    }
+    .scrollDown{
+        span{
+            font-size: 40px;
+        }
+    } 
+}
+
+/* 1024px 시작 (pc) */
+@media screen and (min-width:1024px){
+    h1{
+        font-size: 50px;
         text-shadow: 4px 4px 0 $purple;
     }
     .scrollDown{

@@ -75,14 +75,14 @@ const Contact = () => {
                         </p>
                     </form>
                 </div>
-                <Link
-                    to="Main"
-                    smooth="true"
-                    duration={500}
-                    className="scrollDown"
-                >
-                    <span className="material-symbols-outlined">Double_Arrow</span>
-                </Link>
+                <div className="scrollDown">
+                    <Link
+                        to="Main" 
+                        smooth="true"
+                        duration={500}
+                        className="material-symbols-outlined"
+                    >Double_Arrow</Link>
+                </div>
             </div>
         </div>
     )

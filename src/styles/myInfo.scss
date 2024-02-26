@@ -98,7 +98,7 @@ $white : #f8f8f8;
             }
         }
         .scrollDown{
-            span{
+            .material-symbols-outlined{
                 color: $darkgrey;
             }
         }
@@ -161,6 +161,98 @@ $white : #f8f8f8;
                 span{
                     color: $darkgrey;
                 }
+            }
+        }
+    }
+}
+
+/* 768px 시작 (태블릿) */
+@media screen and (min-width:768px){
+    .MyInfo{
+        .MyInfo_wrap{
+            width: calc(100% - 100px);
+            max-width: 100%;
+            margin: 0 auto;
+            .profile{        
+                margin-bottom: 20px;
+                .photo{
+                    width: 40%;
+                    height: 40%;
+                    margin: 0 40px 0 0;
+                }
+                > div{
+                    .name{
+                        font-size: 22px;
+                    }
+                    .myLink{
+                        p{
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .career{
+                h3{
+                    margin: 30px 0 10px;
+                }
+                .university{
+                    font-size: 18px;
+                    > span:first-child{
+                        display: inline-block;
+                    }
+                }
+            }
+            .skills{
+                h3{
+                    margin: 30px 0 10px;
+                }
+                .skillsTxt{
+                    p{  
+                        padding: 5px 10px;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 1024px 시작 (pc) */
+@media screen and (min-width:1024px){
+    .MyInfo{
+        .MyInfo_wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(100% - 300px);
+            max-width: 1000px;
+            padding: 10px 20px 70px;
+            .profile{
+                justify-content: space-evenly;
+                .photo{
+                    width: 250px;
+                    height: 250px;
+                }
+                > div{
+                    width: 300px;
+                    .myLink{
+                        p:hover{
+                            a{
+                                background-color: #ccc;
+                                color: $darkgrey;
+                            }
+                        }
+                    }
+                }
+            }
+            .career{
+                width: 80%;
+                max-width: 700px;
+            }
+            .skills{
+                width: 80%;
+                max-width: 700px;
             }
         }
     }

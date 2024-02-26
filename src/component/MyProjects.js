@@ -1,6 +1,7 @@
+import Slider from "react-slick";
 import Project from "./Project";
 import { Link } from 'react-scroll';
-import Slider from "react-slick";
+
 
 
 const MyProjects = () => {
@@ -8,10 +9,10 @@ const MyProjects = () => {
         // className: "center",
         arrows: false,
         // centerMode: true,
-        infinite: true,
+        infinite: false,
         // centerPadding: "60px",
-        slidesToShow: 3,
-        speed: 500
+        slidesToShow: 1,
+        // speed: 500
     };
 
     return (
@@ -37,6 +38,7 @@ const MyProjects = () => {
                                 <>
                                     <p>React 사용</p>
                                     <p>네이버 지도 api 활용</p>
+                                    <p>React Sikck 라이브러리 활용</p>
                                     <p>Styled-Component 활용</p>
                                     <p>반려동물 데이터 생성, 삭제, 수정</p>
                                 </>
@@ -65,6 +67,7 @@ const MyProjects = () => {
                                 <>
                                     <p>반응형 웹 페이지</p>
                                     <p>JQuery로 동적인 페이지 구현</p>
+                                    <p>Slick 라이브러리 사용</p>
                                 </>
                             }
                             icon={
@@ -150,16 +153,16 @@ const MyProjects = () => {
                                 </>
                             }
                         />
-                    {/* </Slider> */}
+                    {/* </Slidㄴer> */}
                 </div>
-                <Link
-                    to="Contact"
-                    smooth="true"
-                    duration={500}
-                    className="scrollDown"
-                >
-                    <span className="material-symbols-outlined">Double_Arrow</span>
-                </Link>
+                <div className="scrollDown">
+                    <Link
+                        to="Contact" 
+                        smooth="true"
+                        duration={500}
+                        className="material-symbols-outlined"
+                    >Double_Arrow</Link>
+                </div>
             </div>
         </div>
     )

@@ -37,14 +37,14 @@ const Main = () => {
                     <p className="frontend" ref={frontRef}>FRONTEND</p>
                     <p className="myName">LEE DANA</p>
                 </div>
-                <Link 
-                    to="MyInfo" 
-                    smooth="true"
-                    duration={500}
-                    className="scrollDown"
-                >
-                    <span className="material-symbols-outlined">Double_Arrow</span>
-                </Link>
+                <div className="scrollDown">
+                    <Link
+                        to="MyInfo" 
+                        smooth="true"
+                        duration={500}
+                        className="material-symbols-outlined"
+                    >Double_Arrow</Link>
+                </div>
             </div>
         </div>
     )
