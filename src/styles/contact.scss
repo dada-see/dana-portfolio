@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+$purple: #6E398D;
+$green: #9BCE84;
+$white : #f8f8f8;
+$darkgrey: #444;
+
+@mixin inputCommon () {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: 0;
+    outline: none;
+    color: $darkgrey;
+    font-size: 14px;
+    line-height: 1em;
+}
+
+@mixin placeholderCommon () {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.Contact {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    .contact_wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 40px);
+        min-height: 650px;
+        padding-bottom: 100px;
+        box-sizing: border-box;
+        h1 {
+            text-align: center;
+        }
+        .contactBox {
+            padding: 20px;
+            border-radius: $radius;
+            border: 1px solid $white;
+            box-sizing: border-box;
+            background-color: #081223;
+
+            form {
+                >div {
+                    margin-bottom: 10px;
+
+                    >label {
+                        display: block;
+                        margin-left: 5px;
+                        font-size: 16px;
+                        line-height: 2em;
+                    }
+
+                    >input {
+                        @include inputCommon
+                    }
+
+                    >input::placeholder {
+                        @include placeholderCommon
+                    }
+
+                    >textarea {
+                        height: 30vw;
+                        @include inputCommon
+                    }
+
+                    >textarea::placeholder {
+                        @include placeholderCommon
+                    }
+                }
+
+                .btnBox {
+                    text-align: end;
+
+                    .submitBtn {
+                        padding: 7px 10px;
+                        border: 1px solid $white;
+                        border-radius: 7px;
+                        background-color: transparent;
+                        color: $white;
+                        font-size: 14px;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .scrollDown{
+        transform: rotate(-180deg);
+    }
+}
+
+/* 600px 시작 (태블릿) */
+@media screen and (min-width:600px) {
+    .Contact {
+        .contact_wrap {
+            width: calc(100% - 80px);
+            min-height: 650px;
+     
+            h1 {
+                text-align: center;
+            }
+            .contactBox {
+                max-width: 520px;
+                padding: 30px;
+                margin: 0 auto;
+                form {
+                    >div {
+                        margin-bottom: 15px;
+    
+                        >label {
+                            font-size: 20px;
+                        }
+    
+                        >input {
+                            @include inputCommon
+                        }
+    
+                        >input::placeholder {
+                            @include placeholderCommon
+                        }
+    
+                        >textarea {
+                            height: 30vw;
+                            @include inputCommon
+                        }
+    
+                        >textarea::placeholder {
+                            @include placeholderCommon
+                        }
+                    }
+    
+                    .btnBox {
+                        text-align: end;
+    
+                        .submitBtn {
+                            padding: 7px 10px;
+                            border: 1px solid $white;
+                            border-radius: 7px;
+                            background-color: transparent;
+                            color: $white;
+                            font-size: 14px;
+                            line-height: 1em;
+                        }
+                    }
+                }
+            }
+        }
+        .scrollDown{
+            transform: rotate(-180deg);
+        }
+    }
+}

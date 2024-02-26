@@ -1,0 +1,167 @@
+@charset "utf-8";
+$radius: 20px;
+$darkgrey: #444;
+$purple: #6E398D;
+$green: #9BCE84;
+$white : #f8f8f8;
+
+@mixin h3Title (){
+    margin: 15px 0 5px;
+    color: $purple;
+    font-size: 20px;
+    line-height: 1em;
+}
+
+.MyInfo{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    margin-bottom: 40px;
+    color: $darkgrey;
+    .MyInfo_wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 40px);
+        min-height: 650px;
+        padding: 20px 20px 40px;
+        box-sizing: border-box;
+        background-color: $white;
+        border-radius: $radius;
+        .profile{        
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            .photo{
+                width: 50%;
+                height: 50%;
+                margin: 0 0 10px 0;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            > div{
+                text-align: center;
+                .name{
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    line-height: 1.3em;
+                }
+                .myLink{
+                    p{
+                        margin-bottom: 5px;
+                        a{
+                            display: block;
+                            padding: 5px 10px;
+                            background-color: $darkgrey; 
+                            border-radius: $radius;
+                            color: $white;
+                            line-height: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+        .career{
+            h3{
+                @include h3Title();
+            }
+            .university{
+                > span:first-child{
+                    display: block;
+                }
+                > span:last-child{
+                    font-weight: 600;
+                }
+            }
+        }
+        .skills{
+            h3{
+                @include h3Title();
+            }
+            .skillsTxt{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                p{
+                    margin: 0 6px 8px 0;
+                    padding: 3px 7px;
+                    border-radius: 20px;
+                    border: 1px solid #666;
+                }
+            }
+        }
+        .scrollDown{
+            span{
+                color: $darkgrey;
+            }
+        }
+    }
+}
+
+/* 600px 시작 (태블릿) */
+@media screen and (min-width:600px){
+    .MyInfo{
+        .MyInfo_wrap{
+            width: calc(100% - 80px);
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 40px 40px 50px;
+            .profile{        
+                flex-direction: row;
+                justify-content: baseline;
+                margin-bottom: 20px;
+                .photo{
+                    width: 40%;
+                    height: 40%;
+                    margin: 0 30px 0 0;
+                }
+                > div{
+                    width: 60%;
+                    .name{
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                    .myLink{
+                        p{
+                            margin-bottom: 7px;
+                        }
+                    }
+                }
+            }
+            .career{
+                h3{
+                    margin: 15px 0;
+                }
+                .university{
+                    font-size: 16px;
+                    > span:first-child{
+                        display: inline-block;
+                    }
+                }
+            }
+            .skills{
+                h3{
+                    margin: 15px 0;
+                }
+                .skillsTxt{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .scrollDown{
+                bottom: 20px;
+                span{
+                    color: $darkgrey;
+                }
+            }
+        }
+    }
+}

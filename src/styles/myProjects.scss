@@ -1,0 +1,249 @@
+@charset "utf-8";
+$html: '../../public/img/icons/icon_html.png';
+$css: '../../public/img/icons/icon_css.png';
+$figma: '../../public/img/icons/icon_figma.png';
+$github: '../../public/img/icons/icon_github.png';
+$js: '../../public/img/icons/icon_javascript.png';
+$jqueryBK: '../../public/img/icons/icon_jquery_bk.png';
+$jqueryWH: '../../public/img/icons/icon_jquery_wh.png';
+$mysql: '../../public/img/icons/icon_mysql.png';
+$nodejs: '../../public/img/icons/icon_nodejs.png';
+$react: '../../public/img/icons/icon_react.png';
+$sass: '../../public/img/icons/icon_sass.png';
+$ts: '../../public/img/icons/icon_typescript.png';
+
+@mixin skillIcon($source: $html) {
+    width: 40px;
+    height: 40px;
+    text-indent: -999999px;
+    background-image: url($source);
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    background-position: center;
+}
+
+.html_icon {
+    @include skillIcon;
+}
+
+.css_icon {
+    @include skillIcon($source: $css)
+}
+
+.react_icon {
+    @include skillIcon($source: $react)
+}
+
+.figma_icon {
+    @include skillIcon($source: $figma)
+}
+
+.jquery_icon {
+    @include skillIcon($source: $jqueryBK)
+}
+
+.MyProjects {
+    width: 100%;
+    padding: 20px 0;
+    margin: 0 auto 80px;
+    box-sizing: border-box;
+    .myProjects_wrap {
+        width: 100%;
+        position: relative;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+
+        h1 {
+            margin: 0 0 10px;
+        }
+
+        .Project {
+            width: 100%;
+            padding: 10px 40px;
+            box-sizing: border-box;
+            color: $darkgrey;
+
+            .project_wrap {
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: $white;
+                border-radius: $radius;
+
+                .photo {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 10px;
+                        border-radius: 15px;
+                    }
+                }
+
+                .titleBox {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid #ddd;
+
+                    .title {
+                        h3 {
+                            color: $purple;
+                            font-size: 18px;
+                            line-height: 1.4em;
+                        }
+                    }
+
+                    .linkBox {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        .portfolioLink {
+                            a {
+                                span {
+                                    color: $darkgrey;
+                                    font-size: 30px;
+                                    line-height: 1em;
+                                }
+                            }
+                        }
+
+                        .portfolioGit {
+                            margin-left: 5px;
+
+                            a {
+                                img {
+                                    width: 28px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .content {
+                    min-height: 100px;
+                }
+
+                .skills_Icon {
+                    display: flex;
+                }
+            }
+        }
+
+        .Project.pj1 {
+            .project_wrap {
+                padding: 20px 15px 20px 20px;
+
+                .photo {
+                    display: flex;
+
+                    img {
+                        width: calc(33.33% - 5px);
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 600px 시작 (태블릿) */
+@media screen and (min-width:600px) {
+    .MyProjects {
+
+        h1 {
+            margin: 0 40px 20px;
+        }
+
+        .Project {
+            padding: 10px 40px;
+
+            .project_wrap {
+                max-width: 520px;
+                padding: 30px;
+                margin: 0 auto;
+
+                .photo {
+                    img {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .titleBox {
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+
+                    .title {
+                        display: flex;
+                        align-items: center;
+
+                        h3 {
+                            margin: 0 10px 2px 0;
+                            font-size: 24px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .linkBox {
+                        a {
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        .portfolioLink {
+                            a {
+                                span {
+                                    color: $darkgrey;
+                                    font-size: 40px;
+                                    line-height: 1em;
+                                }
+                            }
+                        }
+
+                        .portfolioGit {
+                            a {
+                                img {
+                                    width: 35px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .content {
+                    margin-bottom: 15px;
+                    font-size: 16px;
+                    line-height: 1.6em;
+                }
+
+                .skills_Icon {
+                    display: flex;
+                }
+            }
+        }
+
+        .Project.pj1 {
+            .project_wrap {
+                padding: 30px 25px 30px 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+
+}

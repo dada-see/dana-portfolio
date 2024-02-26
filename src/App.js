@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Contact from './component/Contact';
+import Main from './component/Main';
+import MyInfo from './component/MyInfo';
+import MyProjects from './component/MyProjects';
+import MySkills from './component/MySkills';
+// import { init } from './dist/galaxy';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    // useEffect(()=>{
+    //     // window.addEventListener("load", init);
+    //     init();
+    // }, [])
+
+    return (
+        <div className="App">
+            <Main />
+            <MyInfo />
+            <MySkills />
+            <MyProjects />
+            <Contact />
+        </div>
+    );
 }
 
 export default App;

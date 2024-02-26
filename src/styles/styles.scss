@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@import "./main.scss";
+@import "./myInfo.scss";
+@import "./mySkills.scss";
+@import "./myProjects.scss";
+@import "./contact.scss";
+
+@mixin title($main-color: #9BCE84, $shadow-color: #6E398D) {
+    margin-bottom: 4vw;
+    text-shadow: 2px 2px 0 $shadow-color;
+    color: $main-color;
+    font-size: 7vw;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+@keyframes moveDown{
+    0%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: 5px;
+    }
+}
+
+h1{
+    @include title
+}
+.scrollDown{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    text-align: center;
+    span{
+        color: $white;
+        font-size: 30px;
+        transform: rotate(90deg);
+        animation-name: moveDown;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+} 
+
+/* 600px 시작 (태블릿) */
+@media screen and (min-width:600px){
+    h1{
+        font-size: 6vw;
+        text-shadow: 4px 4px 0 $purple;
+    }
+    .scrollDown{
+        span{
+            font-size: 40px;
+        }
+    } 
+}
