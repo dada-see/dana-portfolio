@@ -4,6 +4,8 @@ import Main from './component/Main';
 import MyInfo from './component/MyInfo';
 import MyProjects from './component/MyProjects';
 import MySkills from './component/MySkills';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // import { init } from './dist/galaxy';
 
 function App() {

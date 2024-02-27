@@ -6,13 +6,27 @@ import { Link } from 'react-scroll';
 
 const MyProjects = () => {
     const settings = {
-        // className: "center",
+        className: "center",
         arrows: false,
-        // centerMode: true,
-        infinite: false,
-        // centerPadding: "60px",
-        slidesToShow: 1,
-        // speed: 500
+        centerMode: true,
+        infinite: true,
+        centerPadding: "0",
+        slidesToShow: 3,
+        speed: 500,
+        responsive: [
+            {
+                breakpoint: 1239,
+                settings: {
+                    centerMode: false,
+                    slidesToShow: 1,
+                    centerPadding: "0",
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: "unslick"
+            }
+        ]
     };
 
     return (
@@ -20,7 +34,7 @@ const MyProjects = () => {
             <div className="myProjects_wrap">
                 <h1>Projects</h1>
                 <div className="projectBox">
-                    {/* <Slider {...settings}> */}
+                    <Slider {...settings}>
                         <Project
                             pjNum={'pj1'}
                             photo={
@@ -41,6 +55,35 @@ const MyProjects = () => {
                                     <p>React Sikck 라이브러리 활용</p>
                                     <p>Styled-Component 활용</p>
                                     <p>반려동물 데이터 생성, 삭제, 수정</p>
+                                </>
+                            }
+                            icon={
+                                <>
+                                    <p className="html_icon">HTML</p>
+                                    <p className="css_icon">CSS</p>
+                                    <p className="react_icon">React</p>
+                                    <p className="figma_icon">Figma</p>
+                                </>
+                            }
+                        />
+                        <Project
+                            pjNum={'pj6'}
+                            photo={
+                                <>
+                                    <img src="./img/projects/pj6_1.jpg" alt="petdoc1" />
+                                    <img src="./img/projects/pj6_2.jpg" alt="petdoc2" />
+                                    <img src="./img/projects/pj6_3.jpg" alt="petdoc3" />
+                                </>
+                            }
+                            projectTitle={'Movie'}
+                            typeProject={'개인 프로젝트'}
+                            portfolioLink={'https://movie-modal-80e92.web.app/'}
+                            gitLink={'https://github.com/dada-see/movie_modal'}
+                            content={
+                                <>
+                                    <p>React 사용</p>
+                                    <p>반응형 웹 페이지</p>
+                                    <p>중복 filtering 기능 구현</p>
                                 </>
                             }
                             icon={
@@ -153,11 +196,11 @@ const MyProjects = () => {
                                 </>
                             }
                         />
-                    {/* </Slider> */}
+                    </Slider>
                 </div>
                 <div className="scrollDown">
                     <Link
-                        to="Contact" 
+                        to="Contact"
                         smooth="true"
                         duration={500}
                         className="material-symbols-outlined"

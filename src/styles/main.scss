@@ -78,11 +78,26 @@ $white : #f8f8f8;
     }
 }
 
-/* 600px 시작 (태블릿) */
-@media screen and (min-width:600px){
+/* 1024px 시작 (태블릿) */
+@media screen and (min-width:1024px){
     .Main{
+        max-width: 1024px;
         .main_wrap{
             margin: 0 auto;
+            .txt{
+                font-size: 100px;
+                text-align: center;
+                .frontend{
+                    top: 200px;
+                }
+                .myName{
+                    bottom: 200px;
+                }
+            }
+            .circle{
+                width: 500px;
+                height: 500px;
+            }
         }
     }
 }

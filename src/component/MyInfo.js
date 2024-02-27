@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const MyInfo = () => {
     return (
@@ -13,9 +14,14 @@ const MyInfo = () => {
                         <p className="name">이다나</p>
                         <div className="myLink">
                             <p>
-                                <a href="/">
-                                    dn100210@gmail.com
-                                </a>
+                                <CopyToClipboard className="email" text="dn100210@gmail.com" onCopy={() => { alert('클립보드에 복사되었습니다.') }} >
+                                    <text>dn100210@gmail.com
+                                        <span class="material-symbols-outlined">
+                                            content_copy
+                                        </span>
+                                    </text>
+
+                                </CopyToClipboard>
                             </p>
                             <p>
                                 <a href="https://github.com/dada-see?tab=repositories">
@@ -57,7 +63,7 @@ const MyInfo = () => {
                 </div>
                 <div className="scrollDown">
                     <Link
-                        to="MySkills" 
+                        to="MySkills"
                         smooth="true"
                         duration={500}
                         className="material-symbols-outlined"

@@ -53,9 +53,6 @@ $ts: '../../public/img/icons/icon_typescript.png';
         padding-bottom: 50px;
         box-sizing: border-box;
 
-        h1 {
-            margin: 0 0 10px;
-        }
         .Project {
             width: 100%;
             padding: 10px 40px;
@@ -140,7 +137,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
             }
         }
 
-        .Project.pj1 {
+        .Project.pj1, .Project.pj6 {
             .project_wrap {
                 padding: 20px 15px 20px 20px;
 
@@ -237,7 +234,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
             }
         }
 
-        .Project.pj1 {
+        .Project.pj1, .Project.pj6 {
             .project_wrap {
                 padding: 30px 25px 30px 30px;
             }
@@ -247,7 +244,91 @@ $ts: '../../public/img/icons/icon_typescript.png';
 
 /* 768px 시작 (태블릿) */
 @media screen and (min-width:768px) {
+    .MyProjects{
+        position: relative;
+        height: 100vh;
+        min-height: 750px;
+        margin: 0 auto 30px;
+        .myProjects_wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .Project{
+                padding: 20px 50px;
+                .project_wrap{
+                    width: 100%;
+                    max-width: 100%;
+                    height: 600px;
+                    .photo {
+                        width: 60%;
+                        height: 20vh;
+                        img {
+                            margin-bottom: 15px;
+                            object-fit: cover;
+                        }
+                    }
+    
+                    .titleBox {
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+    
+                        .title {
+                            display: flex;
+                            align-items: center;
+    
+                            h3 {
+                                margin: 0 10px 2px 0;
+                                font-size: 24px;
+                            }
+    
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+    
+                        .linkBox {
+                            a {
+                                display: block;
+                                width: 40px;
+                                height: 40px;
+                            }
+    
+                            .portfolioLink {
+                                a {
+                                    span {
+                                        color: $darkgrey;
+                                        font-size: 40px;
+                                        line-height: 1em;
+                                    }
+                                }
+                            }
+    
+                            .portfolioGit {
+                                a {
+                                    img {
+                                        width: 35px;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .content {
+                        margin-bottom: 15px;
+                        font-size: 16px;
+                        line-height: 1.6em;
+                    }
+    
+                    .skills_Icon {
+                        display: flex;
+                    }
+                }
+            }
 
+        }
+    }
 }
 
 /* 1024px 시작 (pc) */
@@ -255,13 +336,9 @@ $ts: '../../public/img/icons/icon_typescript.png';
     .MyProjects {
         .myProjects_wrap {
             .projectBox{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
                 width: calc(100% - 280px);
                 margin: 0 auto;
                 .Project {
-                    width: 50%;
                     padding: 10px;
                     box-sizing: border-box;
                     .project_wrap {

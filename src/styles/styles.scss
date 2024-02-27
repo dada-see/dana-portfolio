@@ -46,6 +46,10 @@ h1{
     }
 } 
 
+.slick-center{
+    transform: scale(1.1);
+}
+
 /* 600px 시작 (태블릿) */
 @media screen and (min-width:600px){
     h1{
@@ -62,6 +66,7 @@ h1{
 /* 1024px 시작 (pc) */
 @media screen and (min-width:1024px){
     h1{
+        margin-bottom: 20px;
         font-size: 50px;
         text-shadow: 4px 4px 0 $purple;
     }

@@ -11,6 +11,12 @@ $white : #f8f8f8;
     font-size: 20px;
     line-height: 1em;
 }
+@mixin infoclip (){
+    display: block;
+    padding: 5px 10px;
+    color: $white;
+    line-height: 1.3em;
+}
 
 .MyInfo{
     position: relative;
@@ -54,15 +60,23 @@ $white : #f8f8f8;
                     line-height: 1.3em;
                 }
                 .myLink{
-                    p{
+                    p{  
+                        padding: 2px 10px;
                         margin-bottom: 5px;
+                        background-color: $darkgrey; 
+                        border-radius: $radius;
+                        text{
+                            @include infoclip();
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            span{
+                                margin-left: 5px;
+                                font-size: 16px;
+                            }
+                        }
                         a{
-                            display: block;
-                            padding: 5px 10px;
-                            background-color: $darkgrey; 
-                            border-radius: $radius;
-                            color: $white;
-                            line-height: 1.3em;
+                            @include infoclip();
                         }
                     }
                 }
@@ -118,8 +132,6 @@ $white : #f8f8f8;
                 justify-content: baseline;
                 margin-bottom: 20px;
                 .photo{
-                    width: 40%;
-                    height: 40%;
                     margin: 0 30px 0 0;
                 }
                 > div{
@@ -131,6 +143,9 @@ $white : #f8f8f8;
                     .myLink{
                         p{
                             margin-bottom: 7px;
+                            span{
+                                font-size: 22px;
+                            }
                         }
                     }
                 }
@@ -221,12 +236,14 @@ $white : #f8f8f8;
 /* 1024px 시작 (pc) */
 @media screen and (min-width:1024px){
     .MyInfo{
+        max-width: 1024px;
+        margin: 0 auto;
         .MyInfo_wrap{
             display: flex;
             flex-direction: column;
             align-items: center;
             width: calc(100% - 300px);
-            max-width: 1000px;
+            max-width: 984px;
             padding: 10px 20px 70px;
             .profile{
                 justify-content: space-evenly;
@@ -238,8 +255,14 @@ $white : #f8f8f8;
                     width: 300px;
                     .myLink{
                         p:hover{
+                            background-color: #ccc;
+                            text{
+                                color: $darkgrey;
+                                span{
+                                    color: $darkgrey;
+                                }
+                            }
                             a{
-                                background-color: #ccc;
                                 color: $darkgrey;
                             }
                         }
