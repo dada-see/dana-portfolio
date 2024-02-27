@@ -7,12 +7,15 @@ import { Link } from 'react-scroll';
 const MyProjects = () => {
     const settings = {
         className: "center",
+        dots: true,
         arrows: false,
         centerMode: true,
         infinite: true,
         centerPadding: "0",
         slidesToShow: 3,
         speed: 500,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [
             {
                 breakpoint: 1239,
@@ -38,7 +41,7 @@ const MyProjects = () => {
                         <Project
                             pjNum={'pj1'}
                             photo={
-                                <>
+                                <>  
                                     <img src="./img/projects/pj1_1.jpg" alt="petdoc1" />
                                     <img src="./img/projects/pj1_2.jpg" alt="petdoc2" />
                                     <img src="./img/projects/pj1_3.jpg" alt="petdoc3" />

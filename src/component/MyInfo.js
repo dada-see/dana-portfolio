@@ -6,6 +6,7 @@ const MyInfo = () => {
         <div className="MyInfo" id="MyInfo">
             <div className="MyInfo_wrap">
                 <h1>Frontend</h1>
+
                 <div className="profile">
                     <p className="photo">
                         <img src="./img/profile.jpg" alt="myphoto" />
@@ -16,7 +17,7 @@ const MyInfo = () => {
                             <p>
                                 <CopyToClipboard className="email" text="dn100210@gmail.com" onCopy={() => { alert('클립보드에 복사되었습니다.') }} >
                                     <text>dn100210@gmail.com
-                                        <span class="material-symbols-outlined">
+                                        <span className="material-symbols-outlined">
                                             content_copy
                                         </span>
                                     </text>
@@ -24,12 +25,12 @@ const MyInfo = () => {
                                 </CopyToClipboard>
                             </p>
                             <p>
-                                <a href="https://github.com/dada-see?tab=repositories">
+                                <a href="https://github.com/dada-see?tab=repositories" target='_blank' rel="noreferrer">
                                     GITHUB
                                 </a>
                             </p>
                             <p>
-                                <a href="/">
+                                <a href="/" target='_blank'>
                                     RESUME
                                 </a>
                             </p>

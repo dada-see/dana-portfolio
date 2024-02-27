@@ -3,6 +3,8 @@ $html: '../../public/img/icons/icon_html.png';
 $css: '../../public/img/icons/icon_css.png';
 $figma: '../../public/img/icons/icon_figma.png';
 $github: '../../public/img/icons/icon_github.png';
+$githubBK: '../../public/img/icons/icon_github_bk.png';
+$githubGR: '../../public/img/icons/icon_github_gr.png';
 $js: '../../public/img/icons/icon_javascript.png';
 $jqueryBK: '../../public/img/icons/icon_jquery_bk.png';
 $jqueryWH: '../../public/img/icons/icon_jquery_wh.png';
@@ -47,6 +49,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
     padding: 20px 0;
     margin: 0 auto 80px;
     box-sizing: border-box;
+
     .myProjects_wrap {
         width: 100%;
         position: relative;
@@ -70,10 +73,11 @@ $ts: '../../public/img/icons/icon_typescript.png';
                     height: auto;
                     overflow: hidden;
                     border-radius: 15px;
+                    margin-bottom: 10px;
+
                     img {
                         width: 100%;
                         height: auto;
-                        margin-bottom: 10px;
                         border-radius: 15px;
                     }
                 }
@@ -118,9 +122,15 @@ $ts: '../../public/img/icons/icon_typescript.png';
                             margin-left: 5px;
 
                             a {
-                                img {
-                                    width: 28px;
-                                    height: auto;
+                                .github_icon {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    text-indent: -999999px;
+                                    background-image: url($githubBK);
+                                    background-repeat: no-repeat;
+                                    background-size: 27px auto;
+                                    background-position: center;
                                 }
                             }
                         }
@@ -137,7 +147,8 @@ $ts: '../../public/img/icons/icon_typescript.png';
             }
         }
 
-        .Project.pj1, .Project.pj6 {
+        .Project.pj1,
+        .Project.pj6 {
             .project_wrap {
                 padding: 20px 15px 20px 20px;
 
@@ -171,9 +182,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
                 margin: 0 auto;
 
                 .photo {
-                    img {
-                        margin-bottom: 15px;
-                    }
+                    margin-bottom: 15px;
                 }
 
                 .titleBox {
@@ -213,9 +222,8 @@ $ts: '../../public/img/icons/icon_typescript.png';
 
                         .portfolioGit {
                             a {
-                                img {
-                                    width: 35px;
-                                    height: auto;
+                                .github_icon {
+                                    background-size: 35px auto;
                                 }
                             }
                         }
@@ -234,99 +242,115 @@ $ts: '../../public/img/icons/icon_typescript.png';
             }
         }
 
-        .Project.pj1, .Project.pj6 {
+        .Project.pj1,
+        .Project.pj6 {
             .project_wrap {
                 padding: 30px 25px 30px 30px;
             }
         }
     }
-};
+}
+
+;
 
 /* 768px 시작 (태블릿) */
 @media screen and (min-width:768px) {
-    .MyProjects{
+    .MyProjects {
         position: relative;
         height: 100vh;
         min-height: 750px;
-        margin: 0 auto 30px;
-        .myProjects_wrap{
+        margin: 0 auto 100px;
+
+        .myProjects_wrap {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            .Project{
+
+            .Project {
+                display: flex;
+                align-items: center;
                 padding: 20px 50px;
-                .project_wrap{
+
+                .project_wrap {
+                    position: relative;
                     width: 100%;
-                    max-width: 100%;
-                    height: 600px;
+                    max-width: 90%;
+                    height: 70vh;
+                    min-height: 680px;
+
                     .photo {
-                        width: 60%;
-                        height: 20vh;
+                        height: 300px;
+
                         img {
-                            margin-bottom: 15px;
+                            height: 100%;
                             object-fit: cover;
                         }
                     }
-    
+
                     .titleBox {
                         padding-bottom: 15px;
                         margin-bottom: 15px;
-    
+
                         .title {
                             display: flex;
                             align-items: center;
-    
+
                             h3 {
-                                margin: 0 10px 2px 0;
-                                font-size: 24px;
+                                margin: 0 15px 2px 0;
+                                font-size: 30px;
                             }
-    
+
                             p {
-                                font-size: 16px;
+                                font-size: 20px;
                             }
                         }
-    
+
                         .linkBox {
                             a {
                                 display: block;
-                                width: 40px;
-                                height: 40px;
+                                width: 50px;
+                                height: 50px;
                             }
-    
+
                             .portfolioLink {
                                 a {
                                     span {
-                                        color: $darkgrey;
-                                        font-size: 40px;
-                                        line-height: 1em;
+                                        font-size: 50px;
                                     }
                                 }
                             }
-    
+
                             .portfolioGit {
                                 a {
-                                    img {
-                                        width: 35px;
-                                        height: auto;
+                                    .github_icon {
+                                        background-size: 44px auto;
                                     }
                                 }
                             }
                         }
                     }
-    
+
                     .content {
                         margin-bottom: 15px;
-                        font-size: 16px;
+                        font-size: 18px;
                         line-height: 1.6em;
                     }
-    
+
                     .skills_Icon {
-                        display: flex;
+                        position: absolute;
+                        left: 30px;
+                        bottom: 20px;
+                        align-items: center;
+
+                        h3 {
+                            margin-right: 15px;
+                            font-size: 24px;
+                            line-height: 1em;
+                        }
                     }
                 }
             }
-
         }
     }
 }
@@ -335,62 +359,51 @@ $ts: '../../public/img/icons/icon_typescript.png';
 @media screen and (min-width:1024px) {
     .MyProjects {
         .myProjects_wrap {
-            .projectBox{
-                width: calc(100% - 280px);
-                margin: 0 auto;
+            .projectBox {
                 .Project {
+                    width: calc(100% - 280px);
+                    margin: 0 auto;
                     padding: 10px;
                     box-sizing: border-box;
+
                     .project_wrap {
-                        height: 100%;
-                        .photo {
-                            height: 200px;
-                            overflow: hidden;
-                            margin-bottom: 10px;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: contain;
-                            }
-                        }
+                        padding: 30px;
                         .titleBox {
-                            .title {
-                                h3 {
-                                }
-                            }
                             .linkBox {
-                                a {
-                                }
                                 .portfolioLink {
-                                    a {
+                                    a:hover {
                                         span {
+                                            color: $green;
                                         }
                                     }
                                 }
-        
+
                                 .portfolioGit {
-                                    a {
-                                        img {
+                                    a:hover {
+                                        .github_icon {
+                                            background-image: url($githubGR);
                                         }
                                     }
                                 }
                             }
                         }
                         .content {
+                            font-size: 22px;
                         }
+
                         .skills_Icon {
-                        }
-                    }
-                }
-        
-                .Project.pj1 {
-                    .project_wrap {
-                        .photo {
-                            img {
+                            p{
+                                width: 50px;
+                                height: 50px;
+                                background-size: 40px auto;
                             }
                         }
                     }
                 }
+            }
+
+            .scrollDown {
+                bottom: 10px;
             }
         }
     }

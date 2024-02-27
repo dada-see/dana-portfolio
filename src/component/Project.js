@@ -12,13 +12,13 @@ const Project = ({ pjNum, photo, projectTitle, typeProject, portfolioLink, gitLi
                     </div>
                     <div className="linkBox">
                         <p className="portfolioLink">
-                            <a href={portfolioLink} target="_blank">
+                            <a href={portfolioLink} target="_blank" rel="noreferrer">
                                 <span className="material-symbols-outlined">language</span>
                             </a>
                         </p>
                         <p className="portfolioGit">
-                            <a href={gitLink} target="_blank">
-                                <img src="./img/icons/icon_github_bk.png" alt="git" />
+                            <a href={gitLink} target="_blank" rel="noreferrer">
+                                <span className="github_icon">git</span>
                             </a>
                         </p>
                     </div>
@@ -27,6 +27,7 @@ const Project = ({ pjNum, photo, projectTitle, typeProject, portfolioLink, gitLi
                     {content}
                 </div>
                 <div className="skills_Icon">
+                    <h3>Skills</h3>
                     {icon}
                 </div>
             </div>
