@@ -29,7 +29,29 @@ const MyProjects = () => {
                 breakpoint: 767,
                 settings: "unslick"
             }
-        ]
+        ],
+        appendDots: dots => (
+            <div
+                style={{
+                    backgroundColor: "#ddd",
+                    borderRadius: "10px",
+                    padding: "10px"
+                }}
+            >
+                <ul style={{ margin: "0px" }}> {dots} </ul>
+            </div>
+        ),
+        customPaging: i => (
+            <div
+                style={{
+                    width: "30px",
+                    color: "blue",
+                    border: "1px blue solid"
+                }}
+            >
+                {i + 1}
+            </div>
+        )
     };
 
     return (
@@ -41,7 +63,7 @@ const MyProjects = () => {
                         <Project
                             pjNum={'pj1'}
                             photo={
-                                <>  
+                                <>
                                     <img src="./img/projects/pj1_1.jpg" alt="petdoc1" />
                                     <img src="./img/projects/pj1_2.jpg" alt="petdoc2" />
                                     <img src="./img/projects/pj1_3.jpg" alt="petdoc3" />

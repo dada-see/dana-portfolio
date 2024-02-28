@@ -177,7 +177,6 @@ $ts: '../../public/img/icons/icon_typescript.png';
             padding: 10px 40px;
 
             .project_wrap {
-                max-width: 520px;
                 padding: 30px;
                 margin: 0 auto;
 
@@ -266,6 +265,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            padding-bottom: 100px;
 
             .Project {
                 display: flex;
@@ -275,7 +275,6 @@ $ts: '../../public/img/icons/icon_typescript.png';
                 .project_wrap {
                     position: relative;
                     width: 100%;
-                    max-width: 90%;
                     height: 70vh;
                     min-height: 680px;
 
@@ -360,6 +359,8 @@ $ts: '../../public/img/icons/icon_typescript.png';
     .MyProjects {
         .myProjects_wrap {
             .projectBox {
+                max-width: 1240px;
+                margin: 0 auto;
                 .Project {
                     width: calc(100% - 280px);
                     margin: 0 auto;
@@ -367,6 +368,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
                     box-sizing: border-box;
 
                     .project_wrap {
+                        max-width: 1024px;
                         padding: 30px;
                         .titleBox {
                             .linkBox {
@@ -404,6 +406,81 @@ $ts: '../../public/img/icons/icon_typescript.png';
 
             .scrollDown {
                 bottom: 10px;
+            }
+        }
+    }
+}
+
+/* 1240px 시작 (pc) */
+@media screen and (min-width:1240px) {
+    .MyProjects {
+        .myProjects_wrap {
+            h1{
+                margin-bottom: 40px;
+            }
+            .projectBox {
+                .Project {
+                    width: 100%;
+                    padding: 0;
+
+                    .project_wrap {
+                        max-width: 95%;
+                        height: 600px;
+                        min-height: 600px;
+                        padding: 20px;
+                        .photo {
+                            height: 200px;
+                        }
+                        .titleBox {
+                            .title{
+                                h3{
+                                    margin-right: 8px;
+                                    font-size: 24px;
+                                }
+                                p{
+                                    font-size: 20px;
+                                }
+                            }
+                            .linkBox {
+                                .portfolioLink {
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 40px;
+                                        height: 40px;
+                                        span {
+                                            font-size: 40px;
+                                        }
+                                    }
+                                }
+
+                                .portfolioGit {
+                                    a {
+                                        width: 40px;
+                                        height: 40px;
+                                        .github_icon {
+                                            background-size: 35px auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .content {
+                           font-size: 18px;
+                        }
+
+                        .skills_Icon {
+                            h3{
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .scrollDown {
+                bottom: 0;
             }
         }
     }
