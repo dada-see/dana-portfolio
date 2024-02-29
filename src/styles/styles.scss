@@ -5,6 +5,7 @@
 @import "./mySkills.scss";
 @import "./myProjects.scss";
 @import "./contact.scss";
+@import "./header.scss";
 
 @mixin title($main-color: #9BCE84, $shadow-color: #6E398D) {
     margin-bottom: 4vw;
@@ -45,6 +46,27 @@ h1{
         cursor: pointer;
     }
 } 
+.slick-dots {
+    ul{
+        width: 100%;
+        padding: 0 50px;
+        margin: 0px; 
+        box-sizing: border-box;
+        li{
+            width: calc(100% / 6);
+            padding: 10px 0 ;
+            margin: 0;
+            border-bottom: 3px solid #fff;
+            opacity: 0.7;
+            font-size: 16px;
+            line-height: 1.2em;
+        }
+        .slick-active{
+            opacity: 1;
+        }
+    }
+   
+}
 
 /* 600px 시작 (태블릿) */
 @media screen and (min-width:600px){
@@ -71,4 +93,33 @@ h1{
             font-size: 45px;
         }
     } 
+    .slick-dots{
+        margin-bottom: -20px;
+        ul{
+            width: calc(100% - 280px);
+            max-width: 1024px;
+            padding: 0 10px;
+            margin: 0 auto;
+            li{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/* 1240px 시작 (pc) */
+@media screen and (min-width:1240px){
+    .slick-dots{
+        bottom: -40px;
+        width: 100%;
+        ul{
+            width: 100%;
+            max-width: 100%;
+            padding: 0 10px;
+            margin: 0 auto;
+            li{
+                font-size: 18px;
+            }
+        }
+    }
 }

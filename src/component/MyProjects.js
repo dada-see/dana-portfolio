@@ -6,23 +6,29 @@ import { Link } from 'react-scroll';
 
 const MyProjects = () => {
     const settings = {
-        className: "center",
-        dots: true,
-        arrows: false,
-        centerMode: true,
-        infinite: true,
-        centerPadding: "0",
-        slidesToShow: 3,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 4000,
+        // className: "center",
+       
+        // centerMode: true,
+        // infinite: true,
+        // centerPadding: "0",
+        // slidesToShow: 3,
+        // speed: 500,
+        // autoplay: true,
+        // autoplaySpeed: 4000,
+
         responsive: [
+            {
+                breakpoint: 99999,
+                settings: "unslick",
+            },
             {
                 breakpoint: 1239,
                 settings: {
                     centerMode: false,
                     slidesToShow: 1,
                     centerPadding: "0",
+                    dots: true,
+                    arrows: false,
                 }
             },
             {
@@ -31,27 +37,36 @@ const MyProjects = () => {
             }
         ],
         appendDots: dots => (
-            <div
-                style={{
-                    backgroundColor: "#ddd",
-                    borderRadius: "10px",
-                    padding: "10px"
-                }}
-            >
-                <ul style={{ margin: "0px" }}> {dots} </ul>
+            <div>
+                <ul> {dots} </ul>
             </div>
         ),
-        customPaging: i => (
-            <div
-                style={{
-                    width: "30px",
-                    color: "blue",
-                    border: "1px blue solid"
-                }}
-            >
-                {i + 1}
-            </div>
-        )
+        customPaging: i => {
+            if (i === 0) {
+                i = 'Petdoc'
+            } else if (i === 1) {
+                i = 'Movie'
+            } else if (i === 2) {
+                i = 'Mujagi'
+            } else if (i === 3) {
+                i = 'YPBook'
+            } else if (i === 4) {
+                i = 'Ulsan Tour'
+            } else if (i === 5) {
+                i = 'Bose'
+            }
+            return (
+                <div
+                    style={{
+                        color: "#fff",
+                    }}
+                >
+                    {i}
+                </div>
+            )
+
+
+        }
     };
 
     return (

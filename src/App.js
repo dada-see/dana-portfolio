@@ -6,6 +6,7 @@ import MyProjects from './component/MyProjects';
 import MySkills from './component/MySkills';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Header from './component/Header';
 // import { init } from './dist/galaxy';
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
 
     return (
         <div className="App">
+            <Header />
             <Main />
             <MyInfo />
-            <MySkills />
+            {/* <MySkills /> */}
             <MyProjects />
             <Contact />
         </div>

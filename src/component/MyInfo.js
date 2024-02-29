@@ -64,7 +64,7 @@ const MyInfo = () => {
                 </div>
                 <div className="scrollDown">
                     <Link
-                        to="MySkills"
+                        to="MyProjects"
                         smooth="true"
                         duration={500}
                         className="material-symbols-outlined"

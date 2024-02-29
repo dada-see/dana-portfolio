@@ -177,6 +177,8 @@ $ts: '../../public/img/icons/icon_typescript.png';
             padding: 10px 40px;
 
             .project_wrap {
+                width: calc(100% - 80px);
+                max-width: 520px;
                 padding: 30px;
                 margin: 0 auto;
 
@@ -275,6 +277,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
                 .project_wrap {
                     position: relative;
                     width: 100%;
+                    max-width: 100%;
                     height: 70vh;
                     min-height: 680px;
 
@@ -359,17 +362,19 @@ $ts: '../../public/img/icons/icon_typescript.png';
     .MyProjects {
         .myProjects_wrap {
             .projectBox {
-                max-width: 1240px;
+                max-width: 1024px;
                 margin: 0 auto;
+
                 .Project {
-                    width: calc(100% - 280px);
+                    width: calc(100% - 300px);
                     margin: 0 auto;
                     padding: 10px;
                     box-sizing: border-box;
 
                     .project_wrap {
-                        max-width: 1024px;
+                        max-width: 984px;
                         padding: 30px;
+
                         .titleBox {
                             .linkBox {
                                 .portfolioLink {
@@ -389,12 +394,13 @@ $ts: '../../public/img/icons/icon_typescript.png';
                                 }
                             }
                         }
+
                         .content {
                             font-size: 22px;
                         }
 
                         .skills_Icon {
-                            p{
+                            p {
                                 width: 50px;
                                 height: 50px;
                                 background-size: 40px auto;
@@ -414,69 +420,90 @@ $ts: '../../public/img/icons/icon_typescript.png';
 /* 1240px 시작 (pc) */
 @media screen and (min-width:1240px) {
     .MyProjects {
+        height: 100%;
+        min-height: 100%;
         .myProjects_wrap {
-            h1{
+            position: static;
+            height: 100%;
+            top: initial;
+            left: initial;
+            transform: translate(0);
+            h1 {
                 margin-bottom: 40px;
             }
+
             .projectBox {
-                .Project {
-                    width: 100%;
-                    padding: 0;
-
-                    .project_wrap {
-                        max-width: 95%;
-                        height: 600px;
-                        min-height: 600px;
-                        padding: 20px;
-                        .photo {
-                            height: 200px;
-                        }
-                        .titleBox {
-                            .title{
-                                h3{
-                                    margin-right: 8px;
-                                    font-size: 24px;
-                                }
-                                p{
-                                    font-size: 20px;
-                                }
+                padding-bottom: 30px;
+                .slider{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .Project {
+                        width: 100%;
+                        padding: 0;
+                        max-width: 50%;
+                        .project_wrap {
+                  
+                            height: 600px;
+                            min-height: 600px;
+                            padding: 20px;
+    
+                            .photo {
+                                height: 200px;
                             }
-                            .linkBox {
-                                .portfolioLink {
-                                    a {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        width: 40px;
-                                        height: 40px;
-                                        span {
-                                            font-size: 40px;
+    
+                            .titleBox {
+                                .title {
+                                    h3 {
+                                        margin-right: 8px;
+                                        font-size: 24px;
+                                    }
+    
+                                    p {
+                                        font-size: 20px;
+                                    }
+                                }
+    
+                                .linkBox {
+                                    .portfolioLink {
+                                        a {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            width: 40px;
+                                            height: 40px;
+    
+                                            span {
+                                                font-size: 40px;
+                                            }
+                                        }
+                                    }
+    
+                                    .portfolioGit {
+                                        a {
+                                            width: 40px;
+                                            height: 40px;
+    
+                                            .github_icon {
+                                                background-size: 35px auto;
+                                            }
                                         }
                                     }
                                 }
-
-                                .portfolioGit {
-                                    a {
-                                        width: 40px;
-                                        height: 40px;
-                                        .github_icon {
-                                            background-size: 35px auto;
-                                        }
-                                    }
-                                }
                             }
-                        }
-                        .content {
-                           font-size: 18px;
-                        }
-
-                        .skills_Icon {
-                            h3{
-                                font-size: 22px;
+    
+                            .content {
+                                font-size: 18px;
+                            }
+    
+                            .skills_Icon {
+                                h3 {
+                                    font-size: 22px;
+                                }
                             }
                         }
                     }
                 }
+                
             }
 
             .scrollDown {
