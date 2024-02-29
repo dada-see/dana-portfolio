@@ -433,16 +433,16 @@ $ts: '../../public/img/icons/icon_typescript.png';
             }
 
             .projectBox {
+                max-width: 739px;
                 padding-bottom: 30px;
                 .slider{
                     display: flex;
                     flex-wrap: wrap;
                     .Project {
                         width: 100%;
-                        padding: 0;
+                        padding: 15px;
                         max-width: 50%;
                         .project_wrap {
-                  
                             height: 600px;
                             min-height: 600px;
                             padding: 20px;
