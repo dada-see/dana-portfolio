@@ -26,6 +26,7 @@ $white : #f8f8f8;
     min-height: 650px;
     margin-bottom: 40px;
     color: $darkgrey;
+    z-index: 10;
 
     .MyInfo_wrap {
         position: absolute;
@@ -100,11 +101,13 @@ $white : #f8f8f8;
             }
 
             .university {
-                >span:first-child {
+                > .date {
                     display: block;
+                    font-size: 18px;
+                    font-weight: 600;
                 }
 
-                >span:last-child {
+                > .import{
                     font-weight: 600;
                 }
             }
@@ -251,7 +254,7 @@ $white : #f8f8f8;
                 .university {
                     font-size: 18px;
 
-                    >span:first-child {
+                    > .date {
                         display: inline-block;
                     }
                 }

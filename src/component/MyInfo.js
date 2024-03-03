@@ -38,11 +38,14 @@ const MyInfo = () => {
                     </div>
                 </div>
                 <div className="career">
-                    <h3>Career</h3>
+                    <h3>Study</h3>
                     <p className="university">
-                        <span>2023.02 ~ &nbsp;</span>
+                        <span className='date'>2023.02 ~ &nbsp;</span>
                         <span>한국방송통신대학교&nbsp;</span>
-                        <span>컴퓨터 과학과</span>
+                        <span className='import'>컴퓨터 과학과</span>
+                        <br/><br/>
+                        <span className='date'>2023.09 ~ 2024.03 &nbsp;</span>
+                        <span>반응형 웹 & 프론트엔드 개발 실무 양성 과정 수료</span>
                     </p>
                 </div>
                 <div className="skills">

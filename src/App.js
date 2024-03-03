@@ -18,10 +18,10 @@ function App() {
 
     return (
         <div className="App">
+            <div className='bgImage'>backgroundImage</div>
             <Header />
             <Main />
             <MyInfo />
-            {/* <MySkills /> */}
             <MyProjects />
             <Contact />
         </div>

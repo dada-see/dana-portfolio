@@ -45,11 +45,12 @@ $ts: '../../public/img/icons/icon_typescript.png';
 }
 
 .MyProjects {
+    position: relative;
     width: 100%;
     padding: 20px 0;
     margin: 0 auto 80px;
     box-sizing: border-box;
-
+    z-index: 10;
     .myProjects_wrap {
         width: 100%;
         position: relative;
