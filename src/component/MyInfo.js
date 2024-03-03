@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { CopyToClipboard, Text } from 'react-copy-to-clipboard';
 
 const MyInfo = () => {
     return (

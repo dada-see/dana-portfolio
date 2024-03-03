@@ -10,12 +10,14 @@ $white : #f8f8f8;
     top: calc(50% - 13vw);
     right: 0;
     left: 0;
+    white-space : nowrap;
 }
 @mixin txtMyNamePosition(){
     position: absolute;
     bottom: calc(50% - 13vw);
     right: 0;
     left: 0;
+    white-space : nowrap;
 }
 
 .Main{

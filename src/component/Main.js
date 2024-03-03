@@ -3,21 +3,17 @@ import { Link } from 'react-scroll';
 
 const Main = () => {
     const frontRef = useRef(null);
-    const [scrollPosition, setScrollPosition] = useState(0);
-
-    const handleScroll = () => {
-        const position = window.scrollY;
-        if (position > 0) {
-            frontRef.current.style.left = '10px';
-        }
-    }
+    const [scrollMargin, setScrollMargin] = useState(0);
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            window.addEventListener("scroll", handleScroll);
-        }, 100);
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const newMargin = scrollPosition;
+            setScrollMargin(newMargin);
+        }
+        window.addEventListener("scroll", handleScroll);
+
         return () => {
-            clearInterval(timer);
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
@@ -27,15 +23,15 @@ const Main = () => {
         <div className="Main" id="Main">
             <div className="main_wrap">
                 <div className="txt back">
-                    <p className="frontend" ref={frontRef}>FRONTEND</p>
-                    <p className="myName">LEE DANA</p>
+                    <p className="frontend" ref={frontRef} style={{marginRight: `${scrollMargin}px`}}>FRONTEND</p>
+                    <p className="myName" style={{marginLeft: `${scrollMargin}px`}}>LEE DANA</p>
                 </div>
                 <div className="circle">
                     <p>circle</p>
                 </div>
                 <div className="txt front">
-                    <p className="frontend" ref={frontRef}>FRONTEND</p>
-                    <p className="myName">LEE DANA</p>
+                    <p className="frontend" ref={frontRef} style={{marginRight: `${scrollMargin}px`}}>FRONTEND</p>
+                    <p className="myName" style={{marginLeft: `${scrollMargin}px`}}>LEE DANA</p>
                 </div>
                 <div className="scrollDown">
                     <Link
