@@ -198,7 +198,8 @@ $white : #f8f8f8;
                 }
 
                 .skillsTxt {
-                    p {
+                    p { 
+                        cursor: pointer;
                         font-size: 15px;
                     }
                 }

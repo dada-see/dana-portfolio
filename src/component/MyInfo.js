@@ -1,7 +1,10 @@
 import { Link } from 'react-scroll';
 import { CopyToClipboard, Text } from 'react-copy-to-clipboard';
+import { Button } from '@mui/material';
 
 const MyInfo = () => {
+    
+
     return (
         <div className="MyInfo" id="MyInfo">
             <div className="MyInfo_wrap">

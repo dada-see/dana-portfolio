@@ -6,16 +6,6 @@ import { Link } from 'react-scroll';
 
 const MyProjects = () => {
     const settings = {
-        // className: "center",
-       
-        // centerMode: true,
-        // infinite: true,
-        // centerPadding: "0",
-        // slidesToShow: 3,
-        // speed: 500,
-        // autoplay: true,
-        // autoplaySpeed: 4000,
-
         responsive: [
             {
                 breakpoint: 99999,
@@ -29,6 +19,9 @@ const MyProjects = () => {
                     centerPadding: "0",
                     dots: true,
                     arrows: false,
+                    speed: 500,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
                 }
             },
             {

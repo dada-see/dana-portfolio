@@ -44,6 +44,36 @@ $ts: '../../public/img/icons/icon_typescript.png';
     @include skillIcon($source: $jqueryBK)
 }
 
+@keyframes rotateAni {
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes rotateAni2 {
+    0% {
+        transform: rotateY(-90deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes backAni {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
 .MyProjects {
     position: relative;
     width: 100%;
@@ -51,6 +81,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
     margin: 0 auto 80px;
     box-sizing: border-box;
     z-index: 10;
+
     .myProjects_wrap {
         width: 100%;
         position: relative;
@@ -144,6 +175,11 @@ $ts: '../../public/img/icons/icon_typescript.png';
 
                 .skills_Icon {
                     display: flex;
+                    align-items: center;
+
+                    h3 {
+                        margin-right: 6px;
+                    }
                 }
             }
         }
@@ -163,6 +199,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
                 }
             }
         }
+
     }
 }
 
@@ -423,12 +460,14 @@ $ts: '../../public/img/icons/icon_typescript.png';
     .MyProjects {
         height: 100%;
         min-height: 100%;
+
         .myProjects_wrap {
             position: static;
             height: 100%;
             top: initial;
             left: initial;
             transform: translate(0);
+
             h1 {
                 margin-bottom: 40px;
             }
@@ -436,34 +475,37 @@ $ts: '../../public/img/icons/icon_typescript.png';
             .projectBox {
                 max-width: 739px;
                 padding-bottom: 30px;
-                .slider{
+
+                .slider {
                     display: flex;
                     flex-wrap: wrap;
+
                     .Project {
                         width: 100%;
                         padding: 15px;
                         max-width: 50%;
+
                         .project_wrap {
                             height: 600px;
                             min-height: 600px;
                             padding: 20px;
-    
+
                             .photo {
                                 height: 200px;
                             }
-    
+
                             .titleBox {
                                 .title {
                                     h3 {
                                         margin-right: 8px;
                                         font-size: 24px;
                                     }
-    
+
                                     p {
                                         font-size: 20px;
                                     }
                                 }
-    
+
                                 .linkBox {
                                     .portfolioLink {
                                         a {
@@ -472,18 +514,18 @@ $ts: '../../public/img/icons/icon_typescript.png';
                                             justify-content: center;
                                             width: 40px;
                                             height: 40px;
-    
+
                                             span {
                                                 font-size: 40px;
                                             }
                                         }
                                     }
-    
+
                                     .portfolioGit {
                                         a {
                                             width: 40px;
                                             height: 40px;
-    
+
                                             .github_icon {
                                                 background-size: 35px auto;
                                             }
@@ -491,11 +533,11 @@ $ts: '../../public/img/icons/icon_typescript.png';
                                     }
                                 }
                             }
-    
+
                             .content {
                                 font-size: 18px;
                             }
-    
+
                             .skills_Icon {
                                 h3 {
                                     font-size: 22px;
@@ -504,7 +546,7 @@ $ts: '../../public/img/icons/icon_typescript.png';
                         }
                     }
                 }
-                
+
             }
 
             .scrollDown {
