@@ -6,8 +6,6 @@ import { Link } from 'react-scroll';
 
 const MyProjects = () => {
     const settings = {
-
-
         responsive: [
             {
                 breakpoint: 99999,
