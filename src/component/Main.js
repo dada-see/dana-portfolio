@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from 'react-scroll';
 
+
 const Main = () => {
     const frontRef = useRef(null);
     const [scrollMargin, setScrollMargin] = useState(0);

@@ -1,6 +1,5 @@
 import { Link } from 'react-scroll';
-import { CopyToClipboard, Text } from 'react-copy-to-clipboard';
-import { Button } from '@mui/material';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const MyInfo = () => {
     
