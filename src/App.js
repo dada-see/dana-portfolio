@@ -3,7 +3,6 @@ import Contact from './component/Contact';
 import Main from './component/Main';
 import MyInfo from './component/MyInfo';
 import MyProjects from './component/MyProjects';
-import MySkills from './component/MySkills';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from './component/Header';
@@ -18,7 +17,7 @@ function App() {
 
     return (
         <div className="App">
-            <div className='bgImage'>backgroundImage</div>
+            {/* <div className='bgImage'>backgroundImage</div> */}
             <Header />
             <Main />
             <MyInfo />
