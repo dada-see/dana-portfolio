@@ -7,6 +7,7 @@ import { Link } from 'react-scroll';
 const MyProjects = () => {
     const settings = {
 
+
         responsive: [
             {
                 breakpoint: 99999,
@@ -20,6 +21,9 @@ const MyProjects = () => {
                     centerPadding: "0",
                     dots: true,
                     arrows: false,
+                    speed: 500,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
                 }
             },
             {

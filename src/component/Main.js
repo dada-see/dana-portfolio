@@ -23,15 +23,15 @@ const Main = () => {
         <div className="Main" id="Main">
             <div className="main_wrap">
                 <div className="txt back">
-                    <p className="frontend" ref={frontRef} style={{marginRight: `${scrollMargin}px`}}>FRONTEND</p>
-                    <p className="myName" style={{marginLeft: `${scrollMargin}px`}}>LEE DANA</p>
+                    <p className="frontend" ref={frontRef} style={{transform: `translateX(-${scrollMargin}px)`}}>FRONTEND</p>
+                    <p className="myName" style={{transform: `translateX(${scrollMargin}px)`}}>LEE DANA</p>
                 </div>
                 <div className="circle">
                     <p>circle</p>
                 </div>
                 <div className="txt front">
-                    <p className="frontend" ref={frontRef} style={{marginRight: `${scrollMargin}px`}}>FRONTEND</p>
-                    <p className="myName" style={{marginLeft: `${scrollMargin}px`}}>LEE DANA</p>
+                    <p className="frontend" ref={frontRef} style={{transform: `translateX(-${scrollMargin}px)`}}>FRONTEND</p>
+                    <p className="myName" style={{transform: `translateX(${scrollMargin}px)`}}>LEE DANA</p>
                 </div>
                 <div className="scrollDown">
                     <Link
