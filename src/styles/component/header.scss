@@ -55,7 +55,6 @@
         .header_wrap{
             justify-content: center;
             nav{
-                background-color: aqua;
                 a::after{
                     @include mixin.underline($w:0);
                     transition: .4s;
