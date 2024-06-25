@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+$color-dark: (
+    "main": #1b1d20,
+    "sub": #007aff,
+    "font": #fff
+);
+
+$color-light: (
+    "main": #fff,
+    "sub": #007aff,
+    "font": #333
+);
+
+$header-height: 60px;
+$side-space: 20px;
+
+// 모드별 색상
+    .App {
+        @each $name, $color in $color-light {
+            --#{$name}: #{$color};
+        }
+    } 
+    .App.dark {
+        @each $name, $color in $color-dark {
+            --#{$name}: #{$color};
+        }
+    }
+    // 실제 class에 적용
+    .App {
+        width: 100%;
+        height: 100%;
+        overflow-x:hidden;
+        overflow-y:hidden;
+        background-color: var(--main);
+        color: var(--font);
+        a{
+            color: var(--font);
+        }
+        word-break: keep-all;
+    }
+    // .App.dark {
+    //     background-color: var(--main);
+    //     color: var(--font);
+    //     a{
+    //         color: var(--font);
+    //     }
+    // }

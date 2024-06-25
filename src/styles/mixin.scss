@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@mixin flex($direction: 0){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @if $direction != 0 {
+        flex-direction: $direction;
+    }
+}
+
+@mixin position($posi: absolute, $top: -1, $bottom: -1, $right: -1, $left: -1){
+    position: $posi;
+    @if $top != -1 {
+        top: $top;
+    }
+    @if $bottom != -1 {
+        bottom: $bottom;
+    }
+    @if $right != -1 {
+        right: $right;
+    }
+    @if $left != -1 {
+        left: $left;
+    }
+}
+
+@mixin max_size($width:"500px", $height:"500px"){
+    max-width: $width;
+    max-height: $height;
+}
+
+@mixin underline($w:100%){
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    left: 0;
+    width: $w;
+    height: 2px;
+    background-color: var(--sub);
+}

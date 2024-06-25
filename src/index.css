@@ -9,9 +9,9 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
     line-height: 20px;
-    color: #fff;
+    color: #1b1d20;
     margin: 0;
-    background-color: #333;
+    background-color: #fff;
 }
 
 .material-symbols-outlined {
@@ -29,6 +29,7 @@ ol, li {
 
 a {
     text-decoration: none;
+    color: #1b1d20;
 }
 
 img,
