@@ -17,29 +17,124 @@
       transform: rotate(1turn);
     }
 }
+
 .Project{
-  color: var(--font);
-  .pjBorder{
-      position: relative;
-      overflow: hidden;
-      height: 200px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(131, 131, 131, 0.3);
+    color: var(--font);
+    .project_wrap{
+        h2{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .pjContainer{
+            height: 100%;
+            .pjBorder{
+                position: relative;
+                overflow: hidden;
+                height: 500px;
+                margin-bottom: 20px;
+                border-radius: app.$radius;
+                // box-shadow: 0px 0px 10px rgba(131, 131, 131, 0.3);
+
+                &::before {
+                    content: "";
+                    @include mixin.position($posi: absolute, $top: -50%, $left: -50%);
+                    width: 200%;
+                    height: 200%;
+                    background: conic-gradient(transparent, rgba(0, 122, 255, 0.6), transparent 30%);
+                    animation: rotate 4s linear infinite;
+                }
+        
+                .pjInner{
+                    @include mixin.position($posi: absolute, $top: 2px, $bottom: 2px, $left: 2px, $right: 2px);
+                    box-sizing: border-box;
+                    background: var(--main);
+                    border-radius: app.$radius;
+                    z-index: 10;
+                    &::before{
+                        content: "";
+                        @include mixin.position($posi: absolute, $top: -2px, $bottom: -2px, $left: -2px, $right: -2px);
+                        background-color: var(--font);
+                        border-radius: app.$radius;
+                        opacity: 0.1;
+                        z-index: -1;
+                    }
+                    .main_photo{
+                        height: 38%;
+                        border-radius: app.$radius app.$radius 0 0;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .text{
+                        height: 49.5%;
+                        overflow-y: scroll;
+                        padding: 0 20px;
+                        .title{
+                            color: var(--sub);
+                            font-size: 20px;
+                            line-height: 2.2em;
+                        }
+                        .intro{
+                            margin-bottom: 10px;
+                        }
+                        div{
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-bottom: 10px;
+                            span{
+                                margin: 0 5px 5px 0;
+                                border-radius: 5px;
+                            }
+                        }
+                        .usedSkill span{
+                            font-weight: 600;
+                        }
+                        .feature{
+                            margin-bottom: 0;
+                            span{
+                                padding: 2px 5px;
+                                background-color: rgba(146, 146, 146, 0.5);
+                            }
+                        } 
+                    }
+                    .btn_box{
+                        display: flex;
+                        @include mixin.position($posi: absolute, $bottom: 0px, $left: 0px, $right: 0px);
+                        padding: 5px 20px 15px;
+                        box-sizing: border-box;
+                        border-radius: 0 0 app.$radius app.$radius;
+                        p{  
+                            @include mixin.flex();
+                            margin-right: 5px;
+                            padding: 0 10px;
+                            border-radius: 5px;
+                            background-color: var(--sub);
+                            color: #fff;
+                            a{
+                                color: #fff;
+                                line-height: 32px;
+                            }
+                        }
+                        .icon{
+                            @include mixin.position($posi: absolute, $bottom: 15px, $right: 20px);
+                            padding: 0 5px;
+                            border-radius: 50%;
+                            a{
+                                @include mixin.flex();
+                                span{
+                                    font-size: 24px;
+                                    line-height: 32px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
   
-      &::before {
-        content: "";
-        @include mixin.position($posi: absolute, $top: -50%, $left: -50%);
-        width: 200%;
-        height: 200%;
-        background: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%);
-        animation: rotate 4s linear infinite;
-      }
-  
-      .pjInner{
-          @include mixin.position($posi: absolute, $top: 4px, $bottom: 4px, $left: 4px, $right: 4px);
-          background: var(--main);
-          z-index: 10;
-      }
-  }
+    }
 }
 

@@ -68,7 +68,7 @@
         "id": 1,
         "title": "Portfolio",
         "intro": "저만의 포트폴리오를 만들기 위해 제작하였습니다.",
-        "img": [],
+        "img": ["portfolio"],
         "useSkill": [
             "HTML",
             "SCSS",
@@ -260,7 +260,7 @@
     },
     {
         "id": 5,
-        "title": "영풍문고",
+        "title": "YPBooks",
         "intro": "영풍문고 사이트의 UI를 수정 및 구현하였습니다.",
         "img": ["ypbook"],
         "useSkill": [
@@ -299,7 +299,7 @@
     },
     {
         "id": 6,
-        "title": "울산관광",
+        "title": "Ulsan Tour",
         "intro": "울산 관광 사이트의 UI를 수정 및 구현하였습니다.",
         "img": ["ulsanTour"],
         "useSkill": [

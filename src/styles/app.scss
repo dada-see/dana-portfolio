@@ -12,8 +12,10 @@ $color-light: (
     "font": #333
 );
 
+$transWhitebg: rgba(255, 255, 255, 0.2);
 $header-height: 60px;
 $side-space: 20px;
+$radius: 10px;
 
 // 모드별 색상
     .App {
@@ -39,10 +41,3 @@ $side-space: 20px;
         }
         word-break: keep-all;
     }
-    // .App.dark {
-    //     background-color: var(--main);
-    //     color: var(--font);
-    //     a{
-    //         color: var(--font);
-    //     }
-    // }

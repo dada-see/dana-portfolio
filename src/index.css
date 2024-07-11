@@ -1,5 +1,18 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'LeferiPoint-700';
+    src: url('/public/asset/font/LeferiPointBlack.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LeferiPoint-200';
+    src: url('/public/asset/font/LeferiPointWhite.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LeferiPoint-400';
+    src: url('/public/asset/font/LeferiBaseRegular.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +43,16 @@ ol, li {
 a {
     text-decoration: none;
     color: #1b1d20;
+}
+
+h1, h2, h3, h4, h5, h6, .changeFont{
+    font-family: 'LeferiPoint-700','Noto Sans KR', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+}
+
+.changeFontNum{
+    font-family: 'LeferiPoint-400','Noto Sans KR', sans-serif;
 }
 
 img,

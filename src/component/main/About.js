@@ -25,7 +25,7 @@ const About = () => {
                     </div>
                     <div className="contact_box">
                         <div className="text" onClick={()=>window.location.href = `tel:010-5484-6446`}>
-                            <p>010 - 5484 - 6446</p>
+                            <p className="changeFontNum">010 - 5484 - 6446</p>
                         </div>
                         <CopyToClipboard className="email round" text="dn100210@gmail.com" onCopy={() => alert('클립보드에 복사되었습니다.')}>
                             <div>
@@ -46,7 +46,7 @@ const About = () => {
                 <div className="info_box">  
                     <h2>Education</h2>
                     <div className="school">
-                        <p className="date">2023.02 -</p>
+                        <p className="date changeFontNum">2023.02 -</p>
                         <p className="what">한국방송통신대학교 컴퓨터과학과</p>
                         <ul>
                             <li>자료구조, 컴퓨터 과학개론, 데이터베이스, 알고리즘 등 학습</li>
@@ -54,7 +54,7 @@ const About = () => {
                         </ul>
                     </div>
                     <div className="academy">
-                        <p className="date">2023.09 - 2024.03</p>
+                        <p className="date changeFontNum">2023.09 - 2024.03</p>
                         <p className="what">반응형 웹 & 프론트엔드 개발 실무 양성 과정 수료</p>
                         <ul>
                             <li>HTML, CSS, JQuery, JavaScript, React등 학습</li>

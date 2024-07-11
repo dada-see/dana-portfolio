@@ -9,7 +9,7 @@ const Header = ({setIsDark, isDark}) => {
         <div className="Header">
             <div className="header_wrap">
                 <div className="navBox">
-                    <nav>
+                    <nav className="changeFont">
                         <Link                    
                             to="About"
                             spy={true}

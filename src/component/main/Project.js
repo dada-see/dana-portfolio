@@ -3,6 +3,18 @@ import axios from "axios";
 
 const Project = () => {
     const [projects, setProjects] = useState([]);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+
+    const handleResize = () => {
+        setIsMobile(window.innerWidth <= 1023);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         const getSkillList = () => {
@@ -25,23 +37,43 @@ const Project = () => {
                     {projects.map((project)=>(
                         <div className="pjBorder" key={project.id}>
                             <div className="pjInner">
-                                <p>{project.title}</p>
-                                <p>{project.intro}</p>
-                                <div>
+                                <div className="main_photo">
                                     <img src={`./img/projects/${project.img[0]}.jpg`} alt="프로젝트 이미지"/>
                                 </div>
-                                <div>
-                                    {project.useSkill.map((skill, index)=>
-                                        <span key={index}>#{skill}</span>
-                                    )}
-                                </div>
-                                <div>
+                                <div className="text">
+                                    <h5 className="title">{project.title}</h5>
+                                    <p className="intro">{project.intro}</p>
+                                    <div className="usedSkill">
+                                        {project.useSkill.map((skill, index)=>
+                                            <span key={index}>#{skill} </span>
+                                        )}
+                                    </div>
+                                    <div className="feature">
                                     {project.feature.map((feature, index)=>
                                         <span key={index}>{feature}</span>
                                     )}
                                 </div>
+                                </div>
+                                <div className={isMobile? 'btn_box': 'btn_box PC' }>
+                                    <h5 style={isMobile? {display:"none"}: {display: "block"}}>{project.title}</h5>
+                                    <p>자세히 보기</p>
+                                    <p>
+                                        <a href={project.url[0]} target='_blank' rel="noreferrer" >
+                                            Github {isMobile? '': '바로가기'}
+                                        </a>
+                                    </p>
+                                    <p className="icon">
+                                        <a href={project.url[1]} target="_blank" rel="noreferrer">
+                                            {isMobile?
+                                            <span className="material-symbols-outlined">
+                                                link
+                                            </span>
+                                            : "사이트 바로가기"
+                                            }
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
-                            <div className="borderBg"></div>
                         </div>
                     ))}
                 </div>

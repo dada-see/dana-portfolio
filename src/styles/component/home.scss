@@ -7,7 +7,7 @@
     padding: 0 20px;
     box-sizing: border-box;
     > div{
-        min-height: 100vh;
+        min-height: 650px;
         padding-top: calc(app.$header-height + 10px);
         box-sizing: border-box;
     }
@@ -18,7 +18,7 @@
             .main_box{
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 .title{
                     margin-bottom: 8px;
                     text-align: center;
@@ -102,7 +102,7 @@
                         content: "";
                         @include mixin.position($posi: absolute, $top: 0, $bottom: 0, $right: 0, $left: 0);
                         background-color: var(--font);
-                        border-radius: 10px;
+                        border-radius: app.$radius;
                         opacity: 0.02;
                     }
                     .date{
@@ -124,5 +124,12 @@
                 
             }
         }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .Home{
+        padding: 0 60px;
     }
 }
