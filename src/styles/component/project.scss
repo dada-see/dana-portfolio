@@ -30,6 +30,7 @@
             .pjBorder{
                 position: relative;
                 overflow: hidden;
+                width: 100%;
                 height: 500px;
                 margin-bottom: 20px;
                 border-radius: app.$radius;
@@ -71,6 +72,9 @@
                     .text{
                         height: 49.5%;
                         overflow-y: scroll;
+                        ::-webkit-scrollbar{
+                            display: none;
+                        }
                         padding: 0 20px;
                         .title{
                             color: var(--sub);
@@ -113,6 +117,7 @@
                             border-radius: 5px;
                             background-color: var(--sub);
                             color: #fff;
+                            cursor: pointer;
                             a{
                                 color: #fff;
                                 line-height: 32px;
@@ -138,3 +143,110 @@
     }
 }
 
+@media screen and (min-width: 768px){
+    .Project{
+        .project_wrap{
+            .pjContainer{
+                display: flex;
+                flex-wrap: wrap;
+                .pjBorder{
+                    width: calc(50% - 10px);
+                    .pjInner{
+                        .text{
+                            overflow-y: hidden;
+                        }
+                    }
+                }
+                >:nth-child(even){
+                    margin-left: 10px;
+                }
+                >:nth-child(odd){
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .Project{
+        .project_wrap{
+            .pjContainer{
+                .pjBorder{
+                    .pjInner{
+                        .main_photo{
+                            height: 50%;
+                            margin-bottom: 10px;
+                        }
+                        .btn_box{
+                            display: none;
+                        }
+                        &:hover .btn_box{
+                            @include mixin.flex($direction: column);
+                            @include mixin.position($posi: absolute, $top: 0px, $bottom: 0px, $left: 0px, $right: 0px);
+                            background-color: var(--grey);
+                            border-radius: app.$radius;
+                            text-align: center;
+                            z-index: 15;
+                            h5{
+                                margin-bottom: 20px;
+                                color: var(--sub);
+                                font-size: 24px;
+                                line-height: 1.2em;
+                            }
+                            p{
+                                width: 200px;
+                                margin: 0 0 15px;
+                                background-color: transparent;
+                                border: 1px solid var(--sub);
+                                border-radius: app.$radius;
+                                color: var(--sub);
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: 50px;
+                                transition: .5s;
+                                a{
+                                    color: var(--sub);
+                                    line-height: 50px;
+                                }
+                                &:hover{
+                                    background-color: var(--sub);
+                                    color: var(--grey);
+                                    transition: .5s;
+                                    a{
+                                        color: var(--grey);
+                                    }
+                                }
+                            }
+                            .icon{
+                                position: relative;
+                                bottom: 0;
+                                right: 0;
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .Project{
+        .project_wrap{
+            .pjContainer{
+                .pjBorder{
+                    width: calc(33.3% - 20px);
+                    margin: 0 10px 20px;
+                }
+            }
+            >:nth-child(even){
+                margin-left: 0;
+            }
+            >:nth-child(odd){
+                margin-right: 0;
+            }
+        }
+    }
+}

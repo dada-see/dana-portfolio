@@ -3,13 +3,15 @@
 $color-dark: (
     "main": #1b1d20,
     "sub": #007aff,
-    "font": #fff
+    "font": #fff,
+    "grey": #222328
 );
 
 $color-light: (
     "main": #fff,
     "sub": #007aff,
-    "font": #333
+    "font": #333,
+    "grey": #eee
 );
 
 $transWhitebg: rgba(255, 255, 255, 0.2);

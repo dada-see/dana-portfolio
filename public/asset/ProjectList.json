@@ -173,7 +173,7 @@
         "useSkill": [
             "HTML",
             "CSS",
-            "Jequery",
+            "JQuery",
             "Figma"
         ],
         "feature": [
@@ -222,7 +222,7 @@
         "useSkill": [
             "HTML",
             "CSS",
-            "Jequery",
+            "JQuery",
             "Figma"
         ],
         "feature": [
@@ -260,24 +260,26 @@
     },
     {
         "id": 5,
-        "title": "YPBooks",
-        "intro": "영풍문고 사이트의 UI를 수정 및 구현하였습니다.",
-        "img": ["ypbook"],
+        "title": "Ulsan Tour",
+        "intro": "울산 관광 사이트의 UI를 수정 및 구현하였습니다.",
+        "img": ["ulsanTour"],
         "useSkill": [
             "HTML",
             "CSS",
+            "JQuery",
             "Figma"
         ],
         "feature": [
             "개인 프로젝트",
-            "반응형"
+            "고정형",
+            "Slick"
         ],
         "url": [
-            "https://github.com/dada-see/ypBook",
-            "https://ypbook.netlify.app/"
+            "https://github.com/dada-see/ulsanTour",
+            "https://ulsantour.netlify.app/"
         ],
         "function": [
-            "미디어 쿼리를 활용한 반응형 디자인"
+           ""
         ],
         "whatIDid":[
             {
@@ -299,9 +301,9 @@
     },
     {
         "id": 6,
-        "title": "Ulsan Tour",
-        "intro": "울산 관광 사이트의 UI를 수정 및 구현하였습니다.",
-        "img": ["ulsanTour"],
+        "title": "YPBooks",
+        "intro": "영풍문고 사이트의 UI를 수정 및 구현하였습니다.",
+        "img": ["ypbook"],
         "useSkill": [
             "HTML",
             "CSS",
@@ -309,14 +311,14 @@
         ],
         "feature": [
             "개인 프로젝트",
-            "고정형"
+            "반응형"
         ],
         "url": [
-            "https://github.com/dada-see/ulsanTour",
-            "https://ulsantour.netlify.app/"
+            "https://github.com/dada-see/ypBook",
+            "https://ypbook.netlify.app/"
         ],
         "function": [
-           ""
+            "미디어 쿼리를 활용한 반응형 디자인"
         ],
         "whatIDid":[
             {

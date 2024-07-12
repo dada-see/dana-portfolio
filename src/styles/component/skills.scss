@@ -95,28 +95,27 @@
 
 @media screen and (min-width: 768px){
     .Skills{
+        height: 100vh;
         .skills_wrap{
-            .grid_wrap{ 
-                .container{
-                    .item{
-                        .Photo{
-                            img{
-                            }
-                        }
-                    }
-                }
-            }
+            @include mixin.flex($direction: column);
+            height: 90vh;
         }
     }
 }
 
 @media screen and (min-width: 1024px){
     .Skills{
-        .item:hover{
-            transform: scale(1.05);
-            transition: .4s;
-            // background-color: rgba(131, 131, 131, 0.1);
-            box-shadow: 0 0 0 transparent;
+        height: 100vh;
+        .skills_wrap{
+            height: calc(100vh - app.$header-height);
+            padding-bottom:  app.$header-height;
+            box-sizing: border-box;
+            .item:hover{
+                transform: scale(1.05);
+                transition: .4s;
+                // background-color: rgba(131, 131, 131, 0.1);
+                box-shadow: 0 0 0 transparent;
+            }
         }
-    }
+        }
 }

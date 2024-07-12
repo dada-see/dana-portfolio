@@ -49,10 +49,10 @@ const Project = () => {
                                         )}
                                     </div>
                                     <div className="feature">
-                                    {project.feature.map((feature, index)=>
-                                        <span key={index}>{feature}</span>
-                                    )}
-                                </div>
+                                        {project.feature.map((feature, index)=>
+                                            <span key={index}>{feature}</span>
+                                        )}
+                                    </div>
                                 </div>
                                 <div className={isMobile? 'btn_box': 'btn_box PC' }>
                                     <h5 style={isMobile? {display:"none"}: {display: "block"}}>{project.title}</h5>

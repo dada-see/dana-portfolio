@@ -9,7 +9,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include mixin.position($posi: fixed, $top: 0, $left: 0);
+        @include mixin.position($posi: fixed, $top: 0, $left: 0, $right: 0);
         width: 100%;
         height: app.$header-height;
         padding: 0 20px;
@@ -50,10 +50,21 @@
     }
 }
 
+@media screen and (min-width: 768px){
+    .Header{
+        .header_wrap{
+            padding: 0 60px;
+        }
+    }
+}
+
 @media screen and (min-width: 1024px){
     .Header{
         .header_wrap{
+            max-width: 1280px;
             justify-content: center;
+            padding: 0 60px;
+            margin: 0 auto;
             nav{
                 a::after{
                     @include mixin.underline($w:0);
@@ -91,7 +102,17 @@
                 }
             }
             .mode{
-                @include mixin.position($posi: absolute, $top: 14px, $right: 40px)
+                @include mixin.position($posi: absolute, $top: 14px, $right: 60px)
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .Header{
+        .header_wrap{
+            .mode{
+                right: 10px;
             }
         }
     }
