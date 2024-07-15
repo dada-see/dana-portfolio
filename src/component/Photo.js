@@ -15,7 +15,7 @@ const Photo = ({name, src, onClick}) => {
             setIsHovering(true);
         }
     };
-
+    
     return(
         <div className={`item ${name}`} 
             onMouseOver={handleMouseOver} 

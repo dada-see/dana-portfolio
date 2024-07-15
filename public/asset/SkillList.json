@@ -3,6 +3,7 @@
         "id": 0,
         "name": "HTML",
         "src": [
+            "html",
             "html"
         ],
         "poss": [
@@ -14,6 +15,7 @@
         "id": 1,
         "name": "CSS",
         "src": [
+            "css",
             "css"
         ],
         "poss": [
@@ -27,6 +29,7 @@
         "id": 2,
         "name": "JavaScript",
         "src": [
+            "javascript",
             "javascript"
         ],
         "poss": [
@@ -38,6 +41,7 @@
         "id": 3,
         "name": "React",
         "src": [
+            "react",
             "react"
         ],
         "poss": [
@@ -49,6 +53,7 @@
         "id": 4,
         "name": "Sass",
         "src": [
+            "sass",
             "sass"
         ],
         "poss": [
@@ -71,6 +76,7 @@
         "id": 6,
         "name": "MySQL",
         "src": [
+            "mysql",
             "mysql"
         ],
         "poss": [
@@ -82,6 +88,7 @@
         "id": 7,
         "name": "Figma",
         "src": [
+            "figma",
             "figma"
         ],
         "poss": [
@@ -94,7 +101,7 @@
         "name": "Github",
         "src": [
             "github_bk",
-            "github_wh"
+            "github"
         ],
         "poss": [
             "repository를 사용하여 팀원들과 협업이 가능합니다.",

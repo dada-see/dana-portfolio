@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@use "../mixin.scss";
+
+$project-color: (
+    "Petdoc": (
+        "point": #ff5a5c,
+        "text": #1b1d20
+    ),
+    "Portfolio": (
+        "point": #007aff,
+        "text": #fff
+    ),
+    "Movie": (
+        "point":#121212,
+        "text": #fff
+    ),
+    "Mujagi": (
+        "point": #eee,
+        "text": #1b1d20
+    ),
+    "Bose": (
+        "point": #6bafd6,
+        "text": #fff
+    ),
+    "Ulsan": (
+        "point": #ffda56,
+        "text": #1b1d20
+    ),
+    "YPBooks": (
+        "point": #295b36,
+        "text": #fff
+    )
+);
+
+@each $name, $styles in $project-color {
+    .ProjectModal.#{$name} {
+      --point-color: #{map-get($styles, "point")};
+      --text-color: #{map-get($styles, "text")};
+    }
+  }
+
+.ProjectModal{
+    @include mixin.position($posi:fixed, $top: 0, $bottom: 0, $left: 0, $right: 0);
+    // background-color: aliceblue;
+    z-index: 110;
+    background-color: var(--point-color);
+    color: var(--text-color);
+}

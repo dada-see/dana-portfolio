@@ -24,6 +24,7 @@
                     margin-right: 10px;
                     font-size: 16px;
                     font-weight: 600;
+                    cursor: pointer;
                 }
                 a.active{
                     background-color: var(--sub);
@@ -42,6 +43,7 @@
             box-sizing: border-box;
             border-radius: 50%;
             background-color: var(--font);
+            cursor: pointer;
             span{
                 color: var(--main);
                 font-size: 24px;

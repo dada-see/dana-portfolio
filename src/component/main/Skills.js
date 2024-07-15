@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Photo from "../Photo";
 import axios from "axios";
+import { DarkMode } from "../../App";
 
 const Skills = () => {
     const [skills, setSkills] = useState([]);
     const [viewModal, setViewModal] = useState(false);
     const [selectedSkill, setSelectedSkill] = useState({}); 
+    const isDark = useContext(DarkMode);
 
     useEffect(() => {
         const getSkillList = () => {
@@ -31,15 +33,17 @@ const Skills = () => {
             <div className="skills_wrap">
                 <h2>SKILL</h2>
                 <div className="grid_wrap">
-                    <div className="container">
+                    <div className={isDark? "container" : "container dark"}>
                         { selectedSkill && viewModal ?
                             <div className="modal">
                                 <div className="modal_content">   
                                     <h3>{selectedSkill.name}</h3>
-                                    <p className="icon_img"><img src={`./img/icons/icon_${selectedSkill.src[0]}.png`} alt="아이콘"/></p>
+                                    <p className="icon_img">
+                                        <img src={`./img/icons/icon_${isDark? selectedSkill.src[0]: selectedSkill.src[1]}.png`} alt="아이콘"/>
+                                    </p>
                                     <div className="content_box">
                                         {selectedSkill.poss.map((text, index)=>(
-                                            <p className={`skill_content ${index}`} key={index}>📌 {text}</p>
+                                            <p className={`skill_content ${index}`} key={index}>📌 &nbsp; {text}</p>
                                         ))}
                                     </div>
                                 </div>
@@ -47,7 +51,7 @@ const Skills = () => {
                             </div>
                             : 
                             skills.map((skill, index) => (
-                                <Photo key={index} src={skill.src[0]} name={skill.name} onClick={() => handleModal(index)} />
+                                <Photo key={index} src={isDark?skill.src[0]: skill.src[1]} name={skill.name} onClick={() => handleModal(index)}/>
                             ))
                         }
                     </div>

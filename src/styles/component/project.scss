@@ -19,7 +19,6 @@
 }
 
 .Project{
-    color: var(--font);
     .project_wrap{
         h2{
             text-align: center;
@@ -34,7 +33,6 @@
                 height: 500px;
                 margin-bottom: 20px;
                 border-radius: app.$radius;
-                // box-shadow: 0px 0px 10px rgba(131, 131, 131, 0.3);
 
                 &::before {
                     content: "";
@@ -71,10 +69,7 @@
                     }
                     .text{
                         height: 49.5%;
-                        overflow-y: scroll;
-                        ::-webkit-scrollbar{
-                            display: none;
-                        }
+                        overflow: overlay;
                         padding: 0 20px;
                         .title{
                             color: var(--sub);
@@ -114,8 +109,10 @@
                             @include mixin.flex();
                             margin-right: 5px;
                             padding: 0 10px;
-                            border-radius: 5px;
                             background-color: var(--sub);
+                            border: 1px solid var(--sub);
+                            border-radius: 5px;
+                            box-sizing: border-box;
                             color: #fff;
                             cursor: pointer;
                             a{
@@ -204,7 +201,7 @@
                                 font-size: 18px;
                                 font-weight: 600;
                                 line-height: 50px;
-                                transition: .5s;
+                                transition: .3s;
                                 a{
                                     color: var(--sub);
                                     line-height: 50px;
@@ -212,7 +209,7 @@
                                 &:hover{
                                     background-color: var(--sub);
                                     color: var(--grey);
-                                    transition: .5s;
+                                    transition: .3s;
                                     a{
                                         color: var(--grey);
                                     }

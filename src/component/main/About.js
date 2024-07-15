@@ -2,6 +2,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import { ReactTyped } from "react-typed";
 
 const About = () => {
+
     return(
         <div className="About" id="About">
             <div className="about_wrap">

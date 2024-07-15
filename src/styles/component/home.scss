@@ -61,8 +61,23 @@
                     > div{
                         @include mixin.flex();
                         margin: 0 10px;
-                        border: 1.5px solid var(--font);
+                        border: 1px solid var(--font);
                         box-sizing: border-box;
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover{
+                            background-color: var(--sub);
+                            border-color: var(--sub);
+                            transition: .3s;
+                            p, a{
+                                color: var(--main);
+                                svg{
+                                    path{
+                                        fill: var(--main);
+                                    }
+                                }
+                            }
+                        }
                         .material-symbols-outlined{
                             font-variation-settings: 'FILL' 1;
                             font-size: 26px;
@@ -136,6 +151,7 @@
 
 @media screen and (min-width: 1024px){
     .Home{
+        position: relative;
         .About{
             @include mixin.flex();
             min-height: 100vh;

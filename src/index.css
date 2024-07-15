@@ -21,6 +21,7 @@ body {
     color: #1b1d20;
     margin: 0;
     background-color: #fff;
+    user-select: none;
 }
 
 .material-symbols-outlined {
