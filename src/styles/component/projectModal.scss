@@ -1,11 +1,12 @@
 @charset "utf-8";
 
+@use "../app.scss";
 @use "../mixin.scss";
 
 $project-color: (
     "Petdoc": (
         "point": #ff5a5c,
-        "text": #1b1d20
+        "text": #fff
     ),
     "Portfolio": (
         "point": #007aff,
@@ -42,8 +43,187 @@ $project-color: (
 
 .ProjectModal{
     @include mixin.position($posi:fixed, $top: 0, $bottom: 0, $left: 0, $right: 0);
-    // background-color: aliceblue;
+    overflow: overlay;
+    letter-spacing: .5px;
     z-index: 110;
-    background-color: var(--point-color);
-    color: var(--text-color);
+    .spot{
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    .side_bar{
+        display: flex;
+        align-items: center;
+        @include mixin.position($posi:fixed, $top: 0, $bottom: 0, $left: 0, $right: 0);
+        height: 60px;
+        padding: 0 20px;
+        background-color: var(--main);
+        box-sizing: border-box;
+        z-index: 10;
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                margin-right: 10px;
+                a{
+                    @include mixin.flex($direction: column);
+                    svg{
+                        @include mixin.iconBorder();
+                        padding: 9px;
+                        path{
+                            fill: var(--font);
+                        }
+                    }
+                    .pc{
+                        display: none;
+                    }
+                }
+            }
+            li.icon{
+                a{
+                    .material-symbols-outlined{
+                        @include mixin.iconBorder();
+                        padding: 7px;
+                        font-variation-settings: 'wght' 600
+                    }
+                }
+            }
+        }
+        button{
+            @include mixin.position($posi: absolute, $top: 10px, $right: 20px);
+            @include mixin.flex();
+            @include mixin.iconBorder();
+            padding: 7px;
+            background-color: var(--font);
+            span{
+                font-variation-settings: 'wght' 600;
+                color: var(--main);
+            }
+        }
+    }
+    .wrap{
+        margin-top: 60px;
+        background-color: var(--main);
+        .main_info{
+            .main_info_wrap{
+                position: relative;
+                @include mixin.flex($direction: column);
+                padding: 20px;
+                box-sizing: border-box;
+                color: var(--text-color);
+                text-align: center;
+                z-index: 1;
+                &::before{
+                    content: "";
+                    @include mixin.position($posi: absolute, $top: 0px, $left: 0px, $right: 0px, $bottom: 40%);
+                    background-color: var(--point-color);
+                    z-index: -1;
+                }
+                .feature {
+                    margin-bottom: 20px;
+                    span{
+                        display: inline-block;
+                        padding: 0 5px;
+                        margin-right: 3px;
+                        box-sizing: border-box;
+                        background-color: #666;
+                        border-radius: 5px;
+                        color: #fff;
+                        line-height: 2em;
+                        &:last-child{
+                            margin: 0;
+                        }
+                    }
+                }
+                h4{
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    line-height: 2em;
+                    letter-spacing: 1px;
+                }
+                .usedSkill{
+                    margin-bottom: 10px;
+                }
+                .main_photo{
+                    max-width: 400px;
+                    padding: 10px;
+                    margin-bottom: 40px;
+                    background-color: #fff;
+                    border: 1px solid #eee;
+                    border-radius: app.$radius;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+                .intro{
+                    margin-bottom: 40px;
+                    color: var(--font);
+                    font-size: 16px;
+                    line-height: 1.7em;
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 90%;
+                    height: 1px;
+                    background-color: rgba(136, 136, 136, 0.5);
+                }
+            }
+     
+        }
+        .text{
+            padding: 20px;
+            box-sizing: border-box;
+            article:nth-child(1), article:nth-child(2){
+                > ul{
+                    li{
+                        position: relative;
+                        padding: 0 20px;
+                        box-sizing: border-box;
+                        &::before{
+                            @include mixin.listDot();
+                        }
+                    }
+                }
+            }
+            article{
+                margin-bottom: 30px;
+                h5, h6{
+                    font-family: 'Noto Sans KR', sans-serif;
+                }
+                h5{
+                    padding: 5px 10px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 2em;
+                }
+                h6{
+                    padding: 5px 10px;
+                    margin-bottom: 10px;
+                    background-color: rgba(177, 177, 177, 0.5);
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                }
+                li{
+                    margin-bottom: 15px;
+                }
+            }
+            .whatIDid, .trouble{
+                li > p{
+                    position: relative;
+                    padding-left: 20px;
+                    margin-bottom: 10px;
+                    box-sizing: border-box;
+                    line-height: 1.5em;
+                    &::before{
+                        @include mixin.listDot();
+                    }
+                }
+            }
+        }
+    }
+
 }

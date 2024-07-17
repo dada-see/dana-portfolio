@@ -41,3 +41,18 @@
     height: 2px;
     background-color: var(--sub);
 }
+
+@mixin iconBorder(){
+    border: 1px solid var(--font);
+    border-radius: 50%;
+}
+
+@mixin listDot(){
+    content: "";
+    display: inline-block;
+    @include position($posi:absolute, $top:10px, $left:10px);
+    width: 3px;
+    height: 3px;
+    background-color: var(--font);
+    border-radius: 50%;
+}
