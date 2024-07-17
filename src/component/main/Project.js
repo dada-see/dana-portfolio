@@ -8,10 +8,12 @@ const Project = () => {
     const [selectProject, setSelectProject] = useState({}); 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
 
+    //모바일 화면 state 변경 함수
     const handleResize = () => {
         setIsMobile(window.innerWidth <= 1023);
     };
 
+    //윈도우 사이즈 변경 이벤트
     useEffect(() => {
         window.addEventListener('resize', handleResize);
         return () => {
@@ -19,6 +21,7 @@ const Project = () => {
         };
     }, []);
 
+    //프로젝트 json 파일 가져오기
     useEffect(() => {
         const getSkillList = () => {
             axios.get('/asset/ProjectList.json')
@@ -32,6 +35,7 @@ const Project = () => {
         getSkillList();
     }, []);
 
+    //모달창 열림/닫힘 & 열려있을 시에 원래 페이지 스크롤 방지
     const handleModal = (index) => {
         if(openModal){
             document.body.style.overflow = 'auto';
@@ -94,7 +98,7 @@ const Project = () => {
                 </div>
             </div>
             {openModal && selectProject && 
-                <ProjectModal project={selectProject} openModal={openModal} handleModal={handleModal} />
+                <ProjectModal project={selectProject} handleModal={handleModal} />
             }
         </div>
     )

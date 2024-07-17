@@ -43,17 +43,12 @@ $project-color: (
 
 .ProjectModal{
     @include mixin.position($posi:fixed, $top: 0, $bottom: 0, $left: 0, $right: 0);
-    overflow: overlay;
-    letter-spacing: .5px;
+    overflow: auto;
     z-index: 110;
-    .spot{
-        font-size: 1.1em;
-        font-weight: 600;
-    }
     .side_bar{
         display: flex;
         align-items: center;
-        @include mixin.position($posi:fixed, $top: 0, $bottom: 0, $left: 0, $right: 0);
+        @include mixin.position($posi:fixed, $top: 0, $left: 0, $right: 0);
         height: 60px;
         padding: 0 20px;
         background-color: var(--main);
@@ -175,6 +170,9 @@ $project-color: (
         .text{
             padding: 20px;
             box-sizing: border-box;
+            .spot{
+                font-weight: 700;
+            }
             article:nth-child(1), article:nth-child(2){
                 > ul{
                     li{
@@ -225,5 +223,108 @@ $project-color: (
             }
         }
     }
+}
 
+@media screen and (min-width: 768px){
+    .ProjectModal{
+        padding: 40px 0;
+        box-sizing: border-box;
+        &::before{
+            content: "";
+            @include mixin.position($posi: fixed, $top: 0, $bottom: 0, $right: 0, $left:0);
+            background-color: rgba(0, 0, 0, .3); 
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+        .side_bar{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            @include mixin.position($posi: fixed, $top: 40px, $right: 50%, $left: auto);
+            width: auto;
+            height: auto;
+            margin-right: -42%;
+            background-color: transparent;
+            transform: translateX(50%);
+            ul{
+                flex-direction: column;
+                li{
+                    margin: 0 0 20px;
+                    a{  
+                        .pc{
+                            display: block;
+                            color: #fff;
+                        }
+                        svg, .material-symbols-outlined{
+                            @include mixin.icon768($padd: 12px);
+                            path{
+                                fill: #1b1d20;
+                            }
+                        }
+                    }
+                }
+                li.icon{
+                    a{
+                        .material-symbols-outlined{
+                            @include mixin.icon768($padd: 10px);
+                            color: #1b1d20;
+                        }
+                    }
+                }
+            }
+            button{
+                @include mixin.position($posi: relative, $top: auto, $right: auto);
+                padding: 10px;
+                margin-bottom: 30px;
+            }
+        }
+        .wrap{
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .ProjectModal{
+        .side_bar{
+            ul{
+                li{
+                    a{
+                        &:hover{
+                            svg{
+                                @include mixin.icon1024Hover();
+                                path{
+                                    fill: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                li.icon > a:hover{
+                    .material-symbols-outlined{
+                        @include mixin.icon1024Hover();
+                        color: #fff;
+                    }
+                }
+            }
+            button{
+                background-color: #1b1d20;
+                border-color: rgba(102, 102, 102, .5);
+                span{
+                    color: #fff;
+                }
+            }
+        }
+        .wrap{
+            .main_info{
+                .main_info_wrap{
+                    padding: 40px 20% 20px;
+                }
+            }
+            .text{
+                padding: 20px 20% 40px;
+            }
+        }
+    }
 }

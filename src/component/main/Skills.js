@@ -9,6 +9,7 @@ const Skills = () => {
     const [selectedSkill, setSelectedSkill] = useState({}); 
     const isDark = useContext(DarkMode);
 
+    //skill json 파일 불러오기
     useEffect(() => {
         const getSkillList = () => {
             axios.get('/asset/SkillList.json')
@@ -22,6 +23,7 @@ const Skills = () => {
         getSkillList();
     }, []);
 
+    //스킬 모달창 select state 변경과 창 열기
     const handleModal = (index) => {
         const selected = skills.find((skill) => skill.id === index);
         setSelectedSkill(selected);

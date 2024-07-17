@@ -1,4 +1,4 @@
-const ProjectModal = ({project, openModal, handleModal}) => {
+const ProjectModal = ({project, handleModal}) => {
     return(
         <div className={`ProjectModal ${project.title}`}>
             <nav className="side_bar">

@@ -1,6 +1,8 @@
 import { Link } from "react-scroll";
 
 const Header = ({setIsDark, isDark}) => {
+
+    //다크모드 변경 함수
     const changeTheme = () => {
         setIsDark(prevIsDark => !prevIsDark);
     };

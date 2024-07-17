@@ -47,6 +47,19 @@
     border-radius: 50%;
 }
 
+@mixin icon768($padd: "10px"){
+    padding: $padd;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+@mixin icon1024Hover(){
+    background-color: #1b1d20;
+    border-color: #1b1d20;
+    transition: .3s;
+}
+
 @mixin listDot(){
     content: "";
     display: inline-block;
