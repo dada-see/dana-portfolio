@@ -1,3 +1,30 @@
+const ArticleSection = ({name, title, items}) =>(
+    <article className={name}>
+        <h5>{title}</h5>
+        <ul>
+            {items.map((item, index)=>(
+                <li key={index}>
+                    {name === 'whatIDid' || name === 'trouble'?(
+                        <>
+                            <h6>{item.title || item.name}</h6>
+                            {name === 'whatIDid' ? (
+                                item.details.map((detail, idx) => <p key={idx}>{detail}</p>)
+                            ):(
+                                <>
+                                    <p><span className="spot">[문제점]&nbsp;</span>{item.issue}</p>
+                                    <p><span className="spot">[해결]&nbsp;</span>{item.solve}</p>
+                                </>
+                            )}
+                        </>
+                    ):(
+                        item
+                    )}
+                </li>
+            ))}
+        </ul>
+    </article>
+)
+
 const ProjectModal = ({project, handleModal}) => {
     return(
         <div className={`ProjectModal ${project.title}`}>
@@ -43,53 +70,12 @@ const ProjectModal = ({project, handleModal}) => {
                     </div>
                 </section>
                 <section className="text">
-                    <article className="function">
-                        <h5>📍 주요 기능 및 특징</h5>
-                        <ul>
-                            {project.function.map((func, index)=>
-                                <li key={index}>{func}</li>
-                            )}
-                        </ul>
-                    </article>
-                    <article className="skill">
-                        <h5>🛠️ 사용 기술 및 언어</h5>
-                        <ul>
-                            {project.useSkill.map((skill, index)=>
-                                <li key={index}>{skill}</li>
-                            )}
-                        </ul>
-                    </article>
-                    <article className="whatIDid">
-                        <h5>🌟 작업 기여도</h5>
-                        <ul>
-                            {project.whatIDid.map((what, index)=>(
-                                <li key={index}>
-                                    <h6>{what.title}</h6>
-                                    {what.details.map((detail, index)=>
-                                        <p key={index}>{detail}</p>
-                                    )}                            
-                                </li>
-                            ))}
-                        </ul>
-                    </article>
-                    <article className="trouble">
-                        <h5>🎯 Trouble Shooting</h5>
-                        <ul>
-                            {project.trouble.map((troub, index)=>
-                                <li key={index}>
-                                    <h6>{troub.name}</h6>
-                                    <p>
-                                        <span className="spot">[문제점]&nbsp;</span>
-                                        {troub.issue}
-                                    </p>
-                                    <p>
-                                        <span className="spot">[해결]&nbsp;</span>
-                                        {troub.solve}
-                                    </p>
-                                </li>
-                            )}
-                        </ul>
-                    </article>
+                    <ArticleSection name="function" title="📍 주요 기능 및 특징" items={project.function} />
+                    <ArticleSection name="skill" title="🛠️ 사용 기술 및 언어" items={project.useSkill} />
+                    <ArticleSection name="whatIDid" title="🌟 작업 기여도"  items={project.whatIDid} />
+                    {project.trouble.length >= 1 &&
+                        <ArticleSection name="trouble" title="🎯 Trouble Shooting" items={project.trouble} />
+                    }
                 </section>
             </div>
         </div>
