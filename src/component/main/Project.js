@@ -35,7 +35,7 @@ const Project = () => {
         getSkillList();
     }, []);
 
-    //모달창 열림/닫힘 & 열려있을 시에 원래 페이지 스크롤 방지
+    //닫힘버튼 함수 (모달창 열림/닫힘 & 열려있을 시에 원래 페이지 스크롤 방지)
     const handleModal = (index) => {
         if(openModal){
             document.body.style.overflow = 'auto';
@@ -47,6 +47,8 @@ const Project = () => {
             setOpenModal(true);
         }
     }
+    
+
 
     return(
         <div className="Project">
@@ -98,7 +100,7 @@ const Project = () => {
                 </div>
             </div>
             {openModal && selectProject && 
-                <ProjectModal project={selectProject} handleModal={handleModal} />
+                <ProjectModal project={selectProject} handleModal={handleModal} openModal={openModal} setOpenModal={setOpenModal}/>
             }
         </div>
     )

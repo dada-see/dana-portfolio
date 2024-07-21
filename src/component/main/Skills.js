@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import Photo from "../Photo";
 import axios from "axios";
 import { DarkMode } from "../../App";
@@ -8,6 +8,7 @@ const Skills = () => {
     const [viewModal, setViewModal] = useState(false);
     const [selectedSkill, setSelectedSkill] = useState({}); 
     const isDark = useContext(DarkMode);
+    const modalRef = useRef();
 
     //skill json 파일 불러오기
     useEffect(() => {
@@ -30,6 +31,25 @@ const Skills = () => {
         setViewModal(true);
     }
 
+    // 모달 외부 클릭 시 모달 닫기
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                setViewModal(false);
+            }
+        };
+
+        if (viewModal) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [viewModal]);
+
     return(
         <div className="Skills">
             <div className="skills_wrap">
@@ -37,7 +57,7 @@ const Skills = () => {
                 <div className="grid_wrap">
                     <div className={isDark? "container" : "container dark"}>
                         { selectedSkill && viewModal ?
-                            <div className="modal">
+                            <div className="modal" ref={modalRef}>
                                 <div className="modal_content">   
                                     <h3>{selectedSkill.name}</h3>
                                     <p className="icon_img">

@@ -1,3 +1,5 @@
+import { useRef, useEffect } from "react";
+
 const ArticleSection = ({name, title, items}) =>(
     <article className={name}>
         <h5>{title}</h5>
@@ -25,10 +27,38 @@ const ArticleSection = ({name, title, items}) =>(
     </article>
 )
 
-const ProjectModal = ({project, handleModal}) => {
+const ProjectModal = ({project, handleModal,openModal,setOpenModal}) => {
+    const modalWrapRef = useRef();
+    const sideBarRef = useRef();
+
+    // 모달 배경 클릭 시 모달 닫기(wrap과 sidebar 제외)
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                modalWrapRef.current && 
+                !modalWrapRef.current.contains(event.target) &&
+                sideBarRef.current &&
+                !sideBarRef.current.contains(event.target)
+            ) {
+                setOpenModal(false);
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        if (openModal) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [setOpenModal, openModal]);
+
     return(
         <div className={`ProjectModal ${project.title}`}>
-            <nav className="side_bar">
+            <nav className="side_bar" ref={sideBarRef}>
                 <ul>
                     <li className="round">
                         <a href={project.url[0]} target='_blank' rel="noreferrer" >
@@ -49,7 +79,7 @@ const ProjectModal = ({project, handleModal}) => {
                     <span className="material-symbols-outlined">close</span>
                 </button>
             </nav>
-            <div className="wrap">
+            <div className="wrap" ref={modalWrapRef}>
                 <section className="main_info">
                     <div className="main_info_wrap">
                         <div className="feature">
