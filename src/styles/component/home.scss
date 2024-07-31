@@ -60,7 +60,7 @@
                     justify-content: center;
                     > div{
                         @include mixin.flex();
-                        margin: 0 10px;
+                        margin: 0 8px;
                         border: 1px solid var(--font);
                         box-sizing: border-box;
                         cursor: pointer;
@@ -73,7 +73,7 @@
                     }
                     .text{
                         font-weight: 500;
-                        padding: 5px 12px;
+                        padding: 5px 10px;
                         border-radius: 30px;
                     }
                     .round{
